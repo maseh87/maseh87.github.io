@@ -15,7 +15,7 @@ trick I learned while creating functions.
 
 For practice I was recreating a few of the most commonly used array methods like pop, push, shift and unshift to get a really good understanding on how methods work in Javascript. For example, the .push method allows you to pass in a value and it will add that value to the end of the array you specified. Like so...
 
-{% highlight css %}
+{% raw %}
 //create a new array
 var array = [1];
 
@@ -25,4 +25,4 @@ array.push(2);
 //array will now be this
 -> [1,2];
 
-
+{% raw %}
