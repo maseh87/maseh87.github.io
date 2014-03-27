@@ -138,9 +138,49 @@
   
 <article class="hentry">
   <header>
-    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2011-03-10T00:00:00-05:00"><a href="http://maseh87.github.io/sample-post/">March 10, 2011</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span></div><!-- /.entry-meta -->
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2013-03-26T00:00:00-04:00"><a href="http://maseh87.github.io/array-prototype/">March 26, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span></div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="http://maseh87.github.io/sample-post/" rel="bookmark" title="The Arguments Object" itemprop="url">The Arguments Object</a></h1>
+      <h1 class="entry-title"><a href="http://maseh87.github.io/array-prototype/" rel="bookmark" title="The Array's prototype" itemprop="url">The Array's prototype</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>I have been a little confused on what .prototype means and what is it for. When I first looking in to exactly what it is a good friend of mine explained that I should think about the word prototype as a bag of methods. At the time I didn’t understand it fully but I have gotten a pretty good grasp on what it is and what it does.</p>
+
+<p>Actually, to think of prototype as a bag of methods is a very good way of describing it. There are a few methods that you can use on all arrays within Javascript such as, .pop, .push, .shift, .unshift etc… Those methods were built on the Array class’ prototype already by JS.</p>
+
+<p>Still a little confused? It’s ok. To get an even better understanding we are gonna make our own method using Array.prototype.</p>
+
+<p>The first one we will make is the .push method. Push is actually just a function that takes a value and pushes it into the last index on the array it is called on.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span>  
+<span class="lineno"> 2</span> <span class="c1">//we will use Array.prototype to write out our function</span>
+<span class="lineno"> 3</span> <span class="c1">//the keyword add is the name of the method I am creating.</span>
+<span class="lineno"> 4</span> <span class="c1">//I didn&#39;t name it push because it is already created...get it?</span>
+<span class="lineno"> 5</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 6</span>   <span class="c1">//the word &#39;this&#39; refers to the array you are calling .add on</span>
+<span class="lineno"> 7</span>   <span class="k">this</span><span class="p">[</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+<span class="lineno"> 8</span>   <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span>
+<span class="lineno"> 9</span> <span class="p">};</span>
+<span class="lineno">10</span> <span class="c1">//create an array</span>
+<span class="lineno">11</span> <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
+<span class="lineno">12</span> <span class="c1">//test out our new method</span>
+<span class="lineno">13</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="lineno">14</span> <span class="o">--&gt;</span><span class="mi">3</span>
+<span class="lineno">15</span> <span class="c1">//lets check out our array</span>
+<span class="lineno">16</span> <span class="nx">arr</span>
+<span class="lineno">17</span> <span class="o">--&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Now we have created a new prototype on the Array class and named it add, but there are a few other stipulations that the native .push has that our method does not. In our current function we are only allowed to insert one value in. The native .push method allows you to add as many as you choose. So let’s make some adjustments…</p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2011-03-10T00:00:00-05:00"><a href="http://maseh87.github.io/arguments-object/">March 10, 2011</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span></div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="http://maseh87.github.io/arguments-object/" rel="bookmark" title="The Arguments Object" itemprop="url">The Arguments Object</a></h1>
     
   </header>
   <div class="entry-content">

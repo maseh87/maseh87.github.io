@@ -19,7 +19,7 @@ Still a little confused? It's ok. To get an even better understanding we are gon
 
 The first one we will make is the .push method. Push is actually just a function that takes a value and pushes it into the last index on the array it is called on.
 
-{% highlight javascript linenos%} {% raw %}
+{% highlight javascript linenos %} {% raw %}
 //we will use Array.prototype to write out our function
 //the keyword add is the name of the method I am creating.
 //I didn't name it push because it is already created...get it?
@@ -38,6 +38,6 @@ arr
 -->[1,2,3]
 
 
-{%end highlight%}{% end raw %}
+{% endraw %}{% endhighlight %}
 
 Now we have created a new prototype on the Array class and named it add, but there are a few other stipulations that the native .push has that our method does not. In our current function we are only allowed to insert one value in. The native .push method allows you to add as many as you choose. So let's make some adjustments...
