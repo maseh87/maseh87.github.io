@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Latest Posts &#8211; Mason's Blog</title>
+<title>Latest Posts &#8211; A beginnner's approach to Javascript</title>
 <meta name="description" content="Describe this nonsense.">
 <meta name="keywords" content="Jekyll, theme, themes, responsive, blog, modern">
 
@@ -23,14 +23,14 @@
 <meta property="og:title" content="Latest Posts">
 <meta property="og:description" content="Describe this nonsense.">
 <meta property="og:url" content="http://maseh87.github.io/index.html">
-<meta property="og:site_name" content="Mason's Blog">
+<meta property="og:site_name" content="A beginnner's approach to Javascript">
 
 
 
 
 
 <link rel="canonical" href="http://maseh87.github.io/">
-<link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Mason's Blog Feed">
+<link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="A beginnner's approach to Javascript Feed">
 <link rel="author" href="maseh87?rel=author">
 
 <!-- http://t.co/dKP3o1e -->
@@ -115,7 +115,7 @@
 				<li><a href="http://maseh87.github.io/tags/">All Tags</a></li>
 			</ul>
 		</li>
-		<li><a href="http://maseh87.github.io/theme-setup">Theme Setup</a></li><li><a href="http://mademistakes.com">External Link</a></li>
+		
 	</ul><!-- /.dl-menu -->
 </nav><!-- /.dl-menuwrapper -->
 
@@ -128,7 +128,7 @@
   
   <div class="header-title">
     <div class="header-title-wrap">
-      <h1>Mason's Blog</h1>
+      <h1>A beginnner's approach to Javascript</h1>
       <h2>Latest Posts</h2>
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
@@ -140,15 +140,54 @@
   <header>
     <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2011-03-10T00:00:00-05:00"><a href="http://maseh87.github.io/sample-post/">March 10, 2011</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span></div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="http://maseh87.github.io/sample-post/" rel="bookmark" title="How I started a blog" itemprop="url">How I started a blog</a></h1>
+      <h1 class="entry-title"><a href="http://maseh87.github.io/sample-post/" rel="bookmark" title="The Arguments Object" itemprop="url">The Arguments Object</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>As my first blog topic I want to cover how I decided to start my blog and what steps I used to get there.</p>
+    <p>If you are still a young buck in the Javascript game, like myself, then maybe I can share a newfound
+trick I learned while creating functions.</p>
 
-<p>There are a ton of different ways to start your own blog. I mean a ton. I decided that I want people to view my blog but I also want to host it for free also. I did some research and found that you can use GitHub &lt;– to host your site for free. To get started visit the GitHub Pages website &lt;–, follow the instructions and you will have a hosted website in no time.</p>
+<p>For practice I was recreating a few of the most commonly used array methods like .pop, .push, .shift and .unshift to get a really good understanding on how methods work in Javascript. For example, the .push method allows you to pass in a value and it will add that value to the end of the array you specified. Like so…</p>
 
-<p>After I hosted my site on GitHub I didn’t want to spend a whole lot of time designing and filling in the blanks so I decided to find a blogging theme to use to help speed up the process. This is where it can get a little confusing, so i’ll explain it in detail on how I got mine to work properly.</p>
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//create a new array</span>
+<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="lineno">3</span> 
+<span class="lineno">4</span> <span class="c1">//use the push method to add a new value to the END of the array</span>
+<span class="lineno">5</span> <span class="nx">array</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="lineno">6</span> 
+<span class="lineno">7</span> <span class="c1">//array will now be this</span>
+<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
+</code></pre></div>
+
+<p>The .push method can take as many values as you give it and they will be ‘pushed’ in order to the end of the array you specify. That is when I discovered the arguments object. If you are making a function to take an unspecified amount of arguments like the .push method you can use the arguments object within your function to get the number of arguments that are being passed in.</p>
+
+<p>Every function has access to the arguments object by default and when it is returned it looks like an array with the arguments listed as the elements of that array. Although it appears to look like an array it is does not act exactly like an array. It’s a little confusing but it can be useful if you need to determine the number of arguments that are passed into your function.</p>
+
+<p>Let’s see it in action to get a better understanding…</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//declare a function and console.log the arguments object inside</span>
+<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">3</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
+<span class="lineno">4</span> <span class="p">};</span>
+<span class="lineno">5</span> <span class="c1">//call the function test and pass it a few arguments</span>
+<span class="lineno">6</span> <span class="nx">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">);</span>
+<span class="lineno">7</span> <span class="c1">//the end result</span>
+<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">]</span>
+</code></pre></div>
+
+<p>The arguments object definitely looks like an array but you cannot treat it exactly like an array. The only method you can use on the arguments object is length, which can be useful if you need to loop through each argument individually or just find out how many arguments are being passed in.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//declare a function and console.log the length of the arguments object</span>
+<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">3</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<span class="lineno">4</span> <span class="p">};</span>
+<span class="lineno">5</span> <span class="c1">//call the function test and pass it a few arguments</span>
+<span class="lineno">6</span> <span class="nx">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">);</span>
+<span class="lineno">7</span> <span class="c1">//the end result</span>
+<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="mi">3</span>
+</code></pre></div>
+
+<p>There are a ton of different uses for the arguments object and by knowing it exists could save you some time and stress while programming. You can read more about it on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">MDN</a> or <a href="http://devdocs.io/javascript/functions_and_function_scope/arguments">DevDocs</a>. Feel free to reach out with any questions or inputs!</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
