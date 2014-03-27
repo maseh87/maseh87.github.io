@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Array.prototype
+title: The Array's prototype
 description: "Get a better understanding of Array.prototype"
 modified: 2014-03-26
 tags: [array, prototype]
