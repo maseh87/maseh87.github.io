@@ -25,7 +25,7 @@ It it very common while programming to get thrown off your path and buried in ra
   the function will add the 2 numbers
   then return the sum
 */
-{% end hightlight %} {% end raw %}
+ {% endraw %}{% endhighlight %}
 
 Now there is no limit to the pseudocode you can write. This is all about what will make you visualize the issue in steps instead of one big problem. Obviously this is not a super difficult function to create but if you are a beginner and you have never been exposed to programming in front of others this is one of the biggest tools you can use to help you impress your interviewer and get your mind back on track. So let's follow our steps and create the function he asked for...
 {% highlight javascript linenos %}{% raw %}
@@ -36,7 +36,7 @@ var add = function(num1, num2) {
 //then return the sum
   return num1 + num2;
 };
-{% end hightlight %} {% end raw %}
+ {% endraw %}{% endhighlight %}
 
 Everyone uses pseudocode in their code no matter how much experience they have at programming. It is a truly powerful and useful tool to practice. Please let me know your techniques that have helped you along the way...
 
