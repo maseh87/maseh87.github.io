@@ -5,31 +5,31 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>The Array's prototype (part 1) &#8211; Mase's approach to Javascript</title>
-<meta name="description" content="Get a better understanding of Array.prototype">
-<meta name="keywords" content="array, prototype">
+<title>Tips on using Pseudocode &#8211; Mase's approach to Javascript</title>
+<meta name="description" content="">
+<meta name="keywords" content="psuedocode, tips, programming">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://maseh87.github.io/images/abstract-3.jpg">
+<meta name="twitter:image" content="http://maseh87.github.io/images/abstract-10.jpg">
 
-<meta name="twitter:title" content="The Array's prototype (part 1)">
-<meta name="twitter:description" content="Get a better understanding of Array.prototype">
+<meta name="twitter:title" content="Tips on using Pseudocode">
+<meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@maseh87">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Array's prototype (part 1)">
-<meta property="og:description" content="Get a better understanding of Array.prototype">
-<meta property="og:url" content="http://maseh87.github.io/array-prototype/">
+<meta property="og:title" content="Tips on using Pseudocode">
+<meta property="og:description" content="">
+<meta property="og:url" content="http://maseh87.github.io/pseudocode-tips/">
 <meta property="og:site_name" content="Mase's approach to Javascript">
 
 
 
 
 
-<link rel="canonical" href="http://maseh87.github.io/array-prototype/">
+<link rel="canonical" href="http://maseh87.github.io/pseudocode-tips/">
 <link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Mase's approach to Javascript Feed">
 <link rel="author" href="maseh87?rel=author">
 
@@ -122,7 +122,7 @@
 
 
 <div class="entry-header">
-  <div class="entry-image"><img src="http://maseh87.github.io/images/abstract-3.jpg" alt="The Array's prototype (part 1)">
+  <div class="entry-image"><img src="http://maseh87.github.io/images/abstract-10.jpg" alt="Tips on using Pseudocode">
     
   </div><!-- /.entry-image -->
 </div><!-- /.entry-header -->
@@ -133,51 +133,24 @@
     <header class="header-title">
       <div class="header-title-wrap">
         
-          <h1 class="entry-title"><a href="http://maseh87.github.io/array-prototype/" rel="bookmark" title="The Array's prototype (part 1)">The Array's prototype (part 1)</a></h1>
+          <h1 class="entry-title"><a href="http://maseh87.github.io/pseudocode-tips/" rel="bookmark" title="Tips on using Pseudocode">Tips on using Pseudocode</a></h1>
         
-        <h2>March 26, 2013</h2>
+        <h2>April 10, 2014</h2>
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">
-      <p>I have been a little confused on what .prototype means and what is it for. When I first looking in to exactly what it is a good friend of mine explained that I should think about the word prototype as a bag of methods. At the time I didn’t understand it fully but I have gotten a pretty good grasp on what it is and what it does.</p>
-
-<p>Actually, to think of prototype as a bag of methods is a very good way of describing it. There are a few methods that you can use on all arrays within Javascript such as, .pop, .push, .shift, .unshift etc… Those methods were built on the Array class’ prototype already by JS.</p>
-
-<p>Still a little confused? It’s ok. To get an even better understanding we are gonna make our own method using Array.prototype.</p>
-
-<p>The first one we will make is the .push method. Push is actually just a function that takes a value and pushes it into the last index on the array it is called on.</p>
-
-<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span>  
-<span class="lineno"> 2</span> <span class="c1">//we will use Array.prototype to write out our function</span>
-<span class="lineno"> 3</span> <span class="c1">//the keyword add is the name of the method I am creating.</span>
-<span class="lineno"> 4</span> <span class="c1">//I didn&#39;t name it push because it is already created...get it?</span>
-<span class="lineno"> 5</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno"> 6</span>   <span class="c1">//the word &#39;this&#39; refers to the array you are calling .add on</span>
-<span class="lineno"> 7</span>   <span class="k">this</span><span class="p">[</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
-<span class="lineno"> 8</span>   <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span>
-<span class="lineno"> 9</span> <span class="p">};</span>
-<span class="lineno">10</span> <span class="c1">//create an array</span>
-<span class="lineno">11</span> <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
-<span class="lineno">12</span> <span class="c1">//test out our new method</span>
-<span class="lineno">13</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-<span class="lineno">14</span> <span class="o">--&gt;</span><span class="mi">3</span>
-<span class="lineno">15</span> <span class="c1">//lets check out our array</span>
-<span class="lineno">16</span> <span class="nx">arr</span>
-<span class="lineno">17</span> <span class="o">--&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-</code></pre></div>
-
-<p>Now we have created a new prototype on the Array class and named it add, but there are a few other stipulations that the native .push has that our method does not. In our current function we are only allowed to insert one value in. The native .push method allows you to add as many as you choose. In part 2 we will go over how to optimize our function to perform exactly like the push method…</p>
+      
 
       <footer class="entry-meta">
-        <span class="entry-tags"><a href="http://maseh87.github.io/tags/#array" title="Pages tagged array" class="tag">array</a><a href="http://maseh87.github.io/tags/#prototype" title="Pages tagged prototype" class="tag">prototype</a></span>
-        <span><a href="http://maseh87.github.io/array-prototype/" rel="bookmark" title="The Array's prototype (part 1)">The Array's prototype (part 1)</a> was published on <span class="entry-date date published updated"><time datetime="2013-03-26T00:00:00-04:00">March 26, 2013</time></span></span>
-        (revised: <span class="entry-date date modified"><time datetime="2014-03-26">03/26/2014</time></span>)
+        <span class="entry-tags"><a href="http://maseh87.github.io/tags/#psuedocode" title="Pages tagged psuedocode" class="tag">psuedocode</a><a href="http://maseh87.github.io/tags/#tips" title="Pages tagged tips" class="tag">tips</a><a href="http://maseh87.github.io/tags/#programming" title="Pages tagged programming" class="tag">programming</a></span>
+        <span><a href="http://maseh87.github.io/pseudocode-tips/" rel="bookmark" title="Tips on using Pseudocode">Tips on using Pseudocode</a> was published on <span class="entry-date date published updated"><time datetime="2014-04-10T00:00:00-04:00">April 10, 2014</time></span></span>
+        (revised: <span class="entry-date date modified"><time datetime="2013-05-31">05/31/2013</time></span>)
         <span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>
         <div class="social-share">
           <ul class="socialcount socialcount-small inline-list">
-            <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://maseh87.github.io/array-prototype/" title="Share on Facebook"><span class="count"><i class="icon-facebook-sign"></i> Like</span></a></li>
-            <li class="twitter"><a href="https://twitter.com/intent/tweet?text=http://maseh87.github.io/array-prototype/" title="Share on Twitter"><span class="count"><i class="icon-twitter-sign"></i> Tweet</span></a></li>
-            <li class="googleplus"><a href="https://plus.google.com/share?url=http://maseh87.github.io/array-prototype/" title="Share on Google Plus"><span class="count"><i class="icon-google-plus-sign"></i> +1</span></a></li>
+            <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://maseh87.github.io/pseudocode-tips/" title="Share on Facebook"><span class="count"><i class="icon-facebook-sign"></i> Like</span></a></li>
+            <li class="twitter"><a href="https://twitter.com/intent/tweet?text=http://maseh87.github.io/pseudocode-tips/" title="Share on Twitter"><span class="count"><i class="icon-twitter-sign"></i> Tweet</span></a></li>
+            <li class="googleplus"><a href="https://plus.google.com/share?url=http://maseh87.github.io/pseudocode-tips/" title="Share on Google Plus"><span class="count"><i class="icon-google-plus-sign"></i> +1</span></a></li>
           </ul>
         </div><!-- /.social-share -->
       </footer>
@@ -187,11 +160,11 @@
     <div class="read-more">
       
         <div class="read-more-header">
-          <a href="http://maseh87.github.io/arguments-object/" class="read-more-btn">Read More</a>
+          <a href="http://maseh87.github.io/array-prototype/" class="read-more-btn">Read More</a>
         </div><!-- /.read-more-header -->
         <div class="read-more-content">
-          <h3><a href="http://maseh87.github.io/pseudocode-tips/" title="Tips on using Pseudocode">Tips on using Pseudocode</a></h3>
-          <p> <a href="http://maseh87.github.io/pseudocode-tips/">Continue reading</a></p>
+          <h3><a href="http://maseh87.github.io/array-prototype/" title="The Array's prototype (part 1)">The Array's prototype (part 1)</a></h3>
+          <p>Get a better understanding of Array.prototype <a href="http://maseh87.github.io/array-prototype/">Continue reading</a></p>
         </div><!-- /.read-more-content -->
       
       <div class="read-more-list">

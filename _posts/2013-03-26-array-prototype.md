@@ -5,7 +5,7 @@ description: "Get a better understanding of Array.prototype"
 modified: 2014-03-26
 tags: [array, prototype]
 image:
-  feature: abstract-3.jpg
+  feature: abstract-6.jpg
 comments: true
 share: true
 ---
