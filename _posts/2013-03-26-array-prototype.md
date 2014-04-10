@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Array's prototype
+title: The Array's prototype (part 1)
 description: "Get a better understanding of Array.prototype"
 modified: 2014-03-26
 tags: [array, prototype]
@@ -40,4 +40,4 @@ arr
 
 {% endraw %}{% endhighlight %}
 
-Now we have created a new prototype on the Array class and named it add, but there are a few other stipulations that the native .push has that our method does not. In our current function we are only allowed to insert one value in. The native .push method allows you to add as many as you choose. So let's make some adjustments...
+Now we have created a new prototype on the Array class and named it add, but there are a few other stipulations that the native .push has that our method does not. In our current function we are only allowed to insert one value in. The native .push method allows you to add as many as you choose. In part 2 we will go over how to optimize our function to perform exactly like the push method...
