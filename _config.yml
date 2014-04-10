@@ -1,5 +1,5 @@
-title:            Mase's approach to Javascript
-description:      Getting Better with Javascript day by day...
+title:            Mase/blog.js
+description:      Dissecting Javascript Objectively
 disqus_shortname:
 #Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://maseh87.github.io
@@ -8,7 +8,7 @@ url:              http://maseh87.github.io
 owner:
   name:           Mason Hargrove
   avatar:         avatar.jpg
-  bio:            "Soon to be programming Extrodinaire"
+  bio:            "Knowledge is Power"
   email:          maseh87@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter: maseh87
