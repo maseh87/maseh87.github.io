@@ -23,7 +23,7 @@ owner:
   google_plus: maseh87
 
 # Background image to be tiled on all pages
-background: ps_neutral.png
+background: witewall_3.png
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:
@@ -41,7 +41,7 @@ links:
   #   external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    America/Los_Angeles
 future:      true
 pygments:    true
 markdown:    kramdown
