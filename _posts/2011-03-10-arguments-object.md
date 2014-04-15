@@ -2,7 +2,7 @@
 layout: post
 title: The Arguments Object
 description: "The weird array like thing called arguments"
-modified: 2013-05-31
+modified: 2014-03-31
 tags: [javascript, firstblog, arguments]
 image:
   feature: abstract-3.jpg

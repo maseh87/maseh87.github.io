@@ -2,7 +2,7 @@
 layout: post
 title: Tips on using Pseudocode
 description: "Practice writing pseudocode more effectively"
-modified: 2013-05-31
+modified: 2014-03-31
 tags: [psuedocode, tips, programming]
 image:
   feature: abstract-10.jpg
