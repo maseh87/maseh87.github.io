@@ -15,13 +15,13 @@ During a recent interview I was asked to create a function that will sort an arr
 There is a ton of different ways to sort in programming. The first one I came across just so happens to be one of the easiest sorting algorithms and it is called Bubble Sort. Basically Bubble Sort passes through your list, finds the largest number and moves it to the end of the list. Then passes back through and does the same thing until the list is in order. The way I made this happen is by simply comparing the number to the number on the right of it, if the number is greater then i would swap the numbers until I reached the end of the list.
 
 Let's move the largest number to the end of the list...
-{%highlight javascript linenos%}{% raw %}
+{% highlight javascript linenos %}{% raw %}
 var arr = [7,1,4];
 
 
 
 
-{% end raw %}{% end highlight %}
+{% endraw %}{% end highlight %}
 
 
 
