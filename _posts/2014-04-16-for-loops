@@ -1,0 +1,55 @@
+---
+layout: post
+title: Helpful Javascript Programming Tips pt 1
+description: "What exactly is a for loop?"
+modified: 2014-03-31
+tags: [arrays, tips, programming, javascript]
+image:
+  feature: abstract-10.jpg
+comments: true
+share: true
+---
+
+Loops can be very confusing if you are researching online for an answer so I will try to clear a few things up with the Javascript for loop. If you plan on learning Javascript you will write a ton of for loops and the quicker you understand how they work the faster you can start doing awesome things with code.
+
+A for loop, at MINIMUM, must take 3 things and each one means something specific. The first thing inside the parentheses is a starting point of your loop, the second is where you want the loop to stop and the third is the iteration or how much the loop increases everytime. So let's write it so you can see what is happening...
+
+{% highlight javascript linenos %}{% raw %}
+//basic for loop structure
+for(var i = 0; i < 5; i++) {
+
+};
+{% end raw %}{% end highlight %}
+
+
+var i = 0 - This defines where the loop starts in this case it is 0
+
+i < 5 - When this statement becomes false the loop will stop. The loop will stop when i is equal to 4 because 5 is no longer less than 5, it is equal.
+
+i++ - This is the same thing as writing i + 1 this statement adds 1 to i everytime it loops
+
+When I was explaining this to a friend of mine he was confused on why I named the variable i. I have been writing this loop so much I forgot to mention that part of it. You will see this variable name i in a lot of the places you research because when performing this loop it is normally over an array. Each time your code loops the variable i represents the index of the array you are looping through. It is just as easy to call the variable index if you want. It is up to you.
+
+Whatever is inside the curly brackets will get executed for the amount of times you specify in your loop. In this loop whatever I insert in the curly brackets will get ran 5 times. Why 5? Because your loop starts at 0. 0, 1, 2, 3, 4 for a total of 5 executions.
+
+The variable i is very useful when looping through arrays because you will have access to the current index and the current value through each iteration of the loop. If you are trying to get each value in an array the second statement will normally stop when i is less than the array.length. The length of an array is always 1 greater than the last index so it will always stop at the end of the specific array.
+
+For Example
+{% highlight javascript linenos %}{% raw %}
+//declare an array
+var arr = [4,3,2,1];
+//loop through and console.log each index and each value in arr
+for(var i = 0; i < arr.length; i++) {
+  console.log(i + ' ' + arr[i]);
+};
+//0 4
+//1 3
+//2 2
+//3 1
+{% end raw %}{% end highlight %}
+
+Practice with the for loop until you understand how exactly it works. Any questions? Just comment!
+
+
+
+

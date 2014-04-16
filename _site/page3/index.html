@@ -22,14 +22,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="A Javascript Blog">
 <meta property="og:description" content="Last 5 posts">
-<meta property="og:url" content="http://maseh87.github.io/index.html">
+<meta property="og:url" content="http://maseh87.github.io/page3/index.html">
 <meta property="og:site_name" content="Mase/blog.js">
 
 
 
 
 
-<link rel="canonical" href="http://maseh87.github.io/">
+<link rel="canonical" href="http://maseh87.github.io/page3/">
 <link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Mase/blog.js Feed">
 <link rel="author" href="maseh87?rel=author">
 
@@ -138,40 +138,56 @@
   
 <article class="hentry">
   <header>
-    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-04-16T00:00:00-07:00"><a href="http://maseh87.github.io/bubble-sort/">April 16, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/bubble-sort/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-03-10T00:00:00-07:00"><a href="http://maseh87.github.io/arguments-object/">March 10, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/arguments-object/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="http://maseh87.github.io/bubble-sort/" rel="bookmark" title="Bubble Sort" itemprop="url">Bubble Sort</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-04-15T00:00:00-07:00"><a href="http://maseh87.github.io/30-day-challenge/">April 15, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/30-day-challenge/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="http://maseh87.github.io/30-day-challenge/" rel="bookmark" title="My 30 day Challenge" itemprop="url">My 30 day Challenge</a></h1>
+      <h1 class="entry-title"><a href="http://maseh87.github.io/arguments-object/" rel="bookmark" title="The Arguments Object" itemprop="url">The Arguments Object</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>I have been programming for a little over 6 months and despite making great progress I feel that I can do more. A tricky part of programming is to realizing when you aren’t making any forward progress in your work. By saying forward progress I mean writing code that is relevant to anything, contributing to some sort of project or creating something at all. It is very easy to get caught up in researching and not getting back to what you were searching for in the first place. After spending too many hours one night researching a few problems, I closed my laptop at about 2 in the morning with absolutely no code to show for it. So I decided to change my way of working…</p>
+    <p>If you are still a young buck in the Javascript game, like myself, then maybe I can share a newfound
+trick I learned while creating functions.</p>
 
-<p>I stumbled on a blog site from a guy name John Resig and one post is about writing code everyday. If you don’t know who John Resig is he is the creator of a little thing called Jquery. Needless to say but if he has advice I am gonna take it. You can read his article <a href="http://ejohn.org/blog/write-code-every-day/">here</a>.</p>
+<p>For practice I was recreating a few of the most commonly used array methods like .pop, .push, .shift and .unshift to get a really good understanding on how methods work in Javascript. For example, the .push method allows you to pass in a value and it will add that value to the end of the array you specified. Like so…</p>
 
-<p>I am gonna challenge myself to the same thing for 30 days. I am going to follow basically the same rules he had.</p>
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//create a new array</span>
+<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="lineno">3</span> 
+<span class="lineno">4</span> <span class="c1">//use the push method to add a new value to the END of the array</span>
+<span class="lineno">5</span> <span class="nx">array</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="lineno">6</span> 
+<span class="lineno">7</span> <span class="c1">//array will now be this</span>
+<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
+</code></pre></div>
 
-<ol>
-  <li>I must write code every day. I can write docs, or blog posts, or other things but it must be in addition to the code that I write.</li>
-  <li>It must be useful code. No tweaking indentation, no code re-formatting, and if at all possible no refactoring. (All these things are permitted, but not as the exclusive work of the day.)</li>
-  <li>All code must be written before midnight.</li>
-  <li>The code must be Open Source and up on Github.</li>
-</ol>
+<p>The .push method can take as many values as you give it and they will be ‘pushed’ in order to the end of the array you specify. That is when I discovered the arguments object. If you are making a function to take an unspecified amount of arguments like the .push method you can use the arguments object within your function to get the number of arguments that are being passed in.</p>
 
-<p>Sounds pretty simple. Follow me for 30 days and see how I progress.</p>
+<p>Every function has access to the arguments object by default and when it is returned it looks like an array with the arguments listed as the elements of that array. Although it appears to look like an array it is does not act exactly like an array. It’s a little confusing but it can be useful if you need to determine the number of arguments that are passed into your function.</p>
 
+<p>Let’s see it in action to get a better understanding…</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//declare a function and console.log the arguments object inside</span>
+<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">3</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
+<span class="lineno">4</span> <span class="p">};</span>
+<span class="lineno">5</span> <span class="c1">//call the function test and pass it a few arguments</span>
+<span class="lineno">6</span> <span class="nx">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">);</span>
+<span class="lineno">7</span> <span class="c1">//the end result</span>
+<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">]</span>
+</code></pre></div>
+
+<p>The arguments object definitely looks like an array but you cannot treat it exactly like an array. The only method you can use on the arguments object is length, which can be useful if you need to loop through each argument individually or just find out how many arguments are being passed in.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//declare a function and console.log the length of the arguments object</span>
+<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">3</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<span class="lineno">4</span> <span class="p">};</span>
+<span class="lineno">5</span> <span class="c1">//call the function test and pass it a few arguments</span>
+<span class="lineno">6</span> <span class="nx">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">);</span>
+<span class="lineno">7</span> <span class="c1">//the end result</span>
+<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="mi">3</span>
+</code></pre></div>
+
+<p>There are a ton of different uses for the arguments object and by knowing it exists could save you some time and stress while programming. You can read more about it on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">MDN</a> or <a href="http://devdocs.io/javascript/functions_and_function_scope/arguments">DevDocs</a>. Feel free to reach out with any questions or inputs!</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -179,12 +195,14 @@
 
 <div class="pagination">
   
-    Previous
+    
+      <a href="http://maseh87.github.io/page2" class="btn">Previous</a>
+    
   
   <ul class="inline-list">
     <li>
       
-        <span class="current-page">1</span>
+        <a href="http://maseh87.github.io">1</a>
       
     </li>
     
@@ -196,13 +214,13 @@
     
       <li>
         
-          <a href="http://maseh87.github.io/page3">3</a>
+          <span class="current-page">3</span>
         
       </li>
     
   </ul>
   
-    <a href="http://maseh87.github.io/page2" class="btn">Next</a>
+    Next
   
 </div><!-- /.pagination -->
 </div><!-- /#main -->

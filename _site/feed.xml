@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://maseh87.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://maseh87.github.io" />
-<updated>2014-04-15T16:45:56-04:00</updated>
+<updated>2014-04-16T07:31:36-07:00</updated>
 <id>http://maseh87.github.io/</id>
 <author>
   <name>Mason Hargrove</name>
@@ -14,11 +14,29 @@
 
 
 <entry>
+  <title type="html"><![CDATA[Bubble Sort]]></title>
+ <link rel="alternate" type="text/html" href="http://maseh87.github.io/bubble-sort/" />
+  <id>http://maseh87.github.io/bubble-sort</id>
+  <updated>2014-04-16T00:00:00-00:00</updated>
+  <published>2014-04-16T00:00:00-07:00</published>
+  
+  <author>
+    <name>Mason Hargrove</name>
+    <uri>http://maseh87.github.io</uri>
+    <email>maseh87@gmail.com</email>
+  </author>
+  <content type="html">
+
+  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/bubble-sort/&quot;&gt;Bubble Sort&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mase/blog.js&lt;/a&gt; on April 16, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
   <title type="html"><![CDATA[My 30 day Challenge]]></title>
  <link rel="alternate" type="text/html" href="http://maseh87.github.io/30-day-challenge/" />
   <id>http://maseh87.github.io/30-day-challenge</id>
   <updated>2013-05-31T00:00:00-00:00</updated>
-  <published>2014-04-15T00:00:00-04:00</published>
+  <published>2014-04-15T00:00:00-07:00</published>
   
   <author>
     <name>Mason Hargrove</name>
@@ -50,7 +68,7 @@
  <link rel="alternate" type="text/html" href="http://maseh87.github.io/pseudocode-tips/" />
   <id>http://maseh87.github.io/pseudocode-tips</id>
   <updated>2014-03-31T00:00:00-00:00</updated>
-  <published>2014-04-10T00:00:00-04:00</published>
+  <published>2014-04-10T00:00:00-07:00</published>
   
   <author>
     <name>Mason Hargrove</name>
@@ -97,7 +115,7 @@
  <link rel="alternate" type="text/html" href="http://maseh87.github.io/array-prototype/" />
   <id>http://maseh87.github.io/array-prototype</id>
   <updated>2014-03-26T00:00:00-00:00</updated>
-  <published>2014-03-26T00:00:00-04:00</published>
+  <published>2014-03-26T00:00:00-07:00</published>
   
   <author>
     <name>Mason Hargrove</name>
@@ -142,7 +160,7 @@
  <link rel="alternate" type="text/html" href="http://maseh87.github.io/arguments-object/" />
   <id>http://maseh87.github.io/arguments-object</id>
   <updated>2014-03-31T00:00:00-00:00</updated>
-  <published>2014-03-10T00:00:00-04:00</published>
+  <published>2014-03-10T00:00:00-07:00</published>
   
   <author>
     <name>Mason Hargrove</name>
