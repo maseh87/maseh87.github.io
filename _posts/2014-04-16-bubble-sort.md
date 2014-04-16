@@ -21,7 +21,7 @@ var arr = [7,1,4];
 
 
 
-{% endraw %}{% end highlight %}
+{% endraw %}{% endhighlight %}
 
 
 
