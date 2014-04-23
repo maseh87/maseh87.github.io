@@ -24,6 +24,6 @@ obj
 //it will return
 obj
 Object {1: 1, 2: 2, 3: 3, 4: 4, 5: 5, name: "Mason"}
-{% endraw %}{% endhightlight %}
+{% endraw %}{% endhighlight %}
 
 I have read up on this and found out that this is something that Chrome's engine, V8, does by default. I thought this was very interesting. Feel free to input if you have any more knowledge of how Chrome reads Javascript or thoughts!
