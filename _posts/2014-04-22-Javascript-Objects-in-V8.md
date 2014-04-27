@@ -5,7 +5,7 @@ description: "Something Chrome does automatically"
 modified: 2014-03-31
 tags: [sorting, objects, javascript]
 image:
-  feature: abstract-3.jpg
+  feature: abstract-2.jpg
 comments: true
 share: true
 ---
