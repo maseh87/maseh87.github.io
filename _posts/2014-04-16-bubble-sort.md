@@ -42,17 +42,12 @@ for(var i = 0; i < arr.length; i++) {
 
 This will be printed
 
-i 0 j 0
-
-i 0 j 1
-
-i 0 j 2
-
-i 1 j 0
-
-i 1 j 1
-
-i 1 j 2
+* i 0 j 0
+* i 0 j 1
+* i 0 j 2
+* i 1 j 0
+* i 1 j 1
+* i 1 j 2
 
 So for one iteration of i it will iterate over until j = arr.length and then i will count up. That is how we will compare all of the numbers until the list is sorted.
 
