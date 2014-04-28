@@ -34,12 +34,13 @@ var BubbleSort = function(arr) {
 
 The function BubbleSort will iterate over the list once and swap the numbers until the largest one is at the end of the list. This code will obviously stop after the largest has been moved but we want to keep iterating over the list until the entire list is sorted. One way we can do that is by putting a loop inside another loop.
 
-> var arr = [1,2]
-> for(var i = 0; i < arr.length; i++) {
->  for(var j = 0; j < arr.length; j++) {
->    console.log('i ' + i + ' j ' + j);
->  }
-> }
+* var arr = [1,2];
+
+for(var i = 0; i < arr.length; i++) {
+  for(var j = 0; j < arr.length; j++) {
+    console.log('i ' + i + ' j ' + j);
+  }
+}*
 
 This will be printed
 
