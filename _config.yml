@@ -1,5 +1,5 @@
 title:            Mason's Blog About Javascript
-description:      Describe your website here.
+description:
 logo:             site-logo.png
 disqus_shortname:
 search:           true
@@ -11,7 +11,7 @@ url:              http://maseh87.github.io
 owner:
   name:           Mason Hargrove
   avatar:         bio-photo.jpg
-  email:          you@email.com
+  email:          maseh87@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   facebook:
@@ -33,14 +33,14 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: About
+  - title: About Me
     url: /about/
   - title: Articles
     url: /articles/
   - title: Theme Setup
     url: /theme-setup/
-  - title: Made Mistakes
-    url: http://mademistakes.com
+  # - title: Made Mistakes
+    # url: http://mademistakes.com
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
