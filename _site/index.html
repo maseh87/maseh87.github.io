@@ -81,7 +81,7 @@
 			<a href="#">About</a>
 			<ul class="dl-submenu">
 				<li>
-					<img src="http://maseh87.github.io/images/avatar.jpg" alt="Mason Hargrove photo" class="author-photo">
+					<img src="http://maseh87.github.io/images/me.jpg" alt="Mason Hargrove photo" class="author-photo">
 					<h4>Mason Hargrove</h4>
 					<p>Knowledge is Power</p>
 				</li>
@@ -138,39 +138,76 @@
   
 <article class="hentry">
   <header>
-    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-04-16T00:00:00-07:00"><a href="http://maseh87.github.io/bubble-sort/">April 16, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/bubble-sort/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-04-22T00:00:00-07:00"><a href="http://maseh87.github.io/Javascript-Objects-in-V8/">April 22, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/Javascript-Objects-in-V8/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="http://maseh87.github.io/bubble-sort/" rel="bookmark" title="Bubble Sort" itemprop="url">Bubble Sort</a></h1>
+      <h1 class="entry-title"><a href="http://maseh87.github.io/Javascript-Objects-in-V8/" rel="bookmark" title="Automatically Sorted Objects in Javascript" itemprop="url">Automatically Sorted Objects in Javascript</a></h1>
     
   </header>
   <div class="entry-content">
-    
+    <p>I recently stumbled across something I thought was a known fact about Javascript. Turns out that it isn’t. During one of my late night study sessions I found out that a javascript object automatically sorts an object if the property is a number.</p>
+
+<p>Let me explain in a little more detail…</p>
+
+<p>If you set the key to a number and the value to any value in javascript it will sort them numerically automatically. If the object has some properties that are numbers and some are strings it will automatically sort the number properties and put the other properties after.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Mason&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="o">:</span> <span class="mi">1</span><span class="p">};</span>
+<span class="lineno">2</span> <span class="c1">//call obj</span>
+<span class="lineno">3</span> <span class="nx">obj</span>
+<span class="lineno">4</span> <span class="c1">//it will return</span>
+<span class="lineno">5</span> <span class="nx">obj</span>
+<span class="lineno">6</span> <span class="nb">Object</span> <span class="p">{</span><span class="mi">1</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Mason&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<p>I have read up on this and found out that this is something that Chrome’s engine, V8, does by default. I thought this was very interesting. Feel free to input if you have any more knowledge of how Chrome reads Javascript or thoughts!</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 
 <article class="hentry">
   <header>
-    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-04-15T00:00:00-07:00"><a href="http://maseh87.github.io/30-day-challenge/">April 15, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/30-day-challenge/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-04-16T00:00:00-07:00"><a href="http://maseh87.github.io/for-loops/">April 16, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/for-loops/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="http://maseh87.github.io/30-day-challenge/" rel="bookmark" title="My 30 day Challenge" itemprop="url">My 30 day Challenge</a></h1>
+      <h1 class="entry-title"><a href="http://maseh87.github.io/for-loops/" rel="bookmark" title="Helpful Javascript Programming Tips pt 1" itemprop="url">Helpful Javascript Programming Tips pt 1</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>I have been programming for a little over 6 months and despite making great progress I feel that I can do more. A tricky part of programming is to realizing when you aren’t making any forward progress in your work. By saying forward progress I mean writing code that is relevant to anything, contributing to some sort of project or creating something at all. It is very easy to get caught up in researching and not getting back to what you were searching for in the first place. After spending too many hours one night researching a few problems, I closed my laptop at about 2 in the morning with absolutely no code to show for it. So I decided to change my way of working…</p>
+    <p>Loops can be very confusing if you are researching online for an answer so I will try to clear a few things up with the Javascript for loop. If you plan on learning Javascript you will write a ton of for loops and the quicker you understand how they work the faster you can start doing awesome things with code.</p>
 
-<p>I stumbled on a blog site from a guy name John Resig and one post is about writing code everyday. If you don’t know who John Resig is he is the creator of a little thing called Jquery. Needless to say but if he has advice I am gonna take it. You can read his article <a href="http://ejohn.org/blog/write-code-every-day/">here</a>.</p>
+<p>A for loop take 3 things and each one means something specific. The first thing inside the parentheses is a starting point of your loop, the second is where you want the loop to stop and the third is the iteration or how much the loop increases everytime. So let’s write it so you can see what is happening…</p>
 
-<p>I am gonna challenge myself to the same thing for 30 days. I am going to follow basically the same rules he had.</p>
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//basic for loop structure</span>
+<span class="lineno">2</span> <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">3</span> 
+<span class="lineno">4</span> <span class="p">};</span>
+</code></pre></div>
 
-<ol>
-  <li>I must write code every day. I can write docs, or blog posts, or other things but it must be in addition to the code that I write.</li>
-  <li>It must be useful code. No tweaking indentation, no code re-formatting, and if at all possible no refactoring. (All these things are permitted, but not as the exclusive work of the day.)</li>
-  <li>All code must be written before midnight.</li>
-  <li>The code must be Open Source and up on Github.</li>
-</ol>
+<p>var i = 0 - This defines where the loop starts in this case it is 0</p>
 
-<p>Sounds pretty simple. Follow me for 30 days and see how I progress.</p>
+<p>i &lt; 5 - When this statement becomes false the loop will stop. The loop will stop when i is equal to 4 because 5 is no longer less than 5, it is equal.</p>
+
+<p>i++ - This is the same thing as writing i + 1 this statement adds 1 to i everytime it loops</p>
+
+<p>When I was explaining this to a friend of mine he was confused on why I named the variable i. I have been writing this loop so much I forgot to mention that part of it. You will see this variable name i in a lot of the places you research because when performing this loop it is normally over an array. Each time your code loops the variable i represents the index of the array you are looping through. It is just as easy to call the variable index if you want. It is up to you.</p>
+
+<p>Whatever is inside the curly brackets will get executed for the amount of times you specify in your loop. In this loop whatever I insert in the curly brackets will get ran 5 times. Why 5? Because your loop starts at 0. 0, 1, 2, 3, 4 for a total of 5 executions.</p>
+
+<p>The variable i is very useful when looping through arrays because you will have access to the current index and the current value through each iteration of the loop. If you are trying to get each value in an array the second statement will normally stop when i is less than the array.length. The length of an array is always 1 greater than the last index so it will always stop at the end of the specific array.</p>
+
+<p>For Example</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span> <span class="c1">//declare an array</span>
+<span class="lineno"> 2</span> <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">];</span>
+<span class="lineno"> 3</span> <span class="c1">//loop through and console.log each index and each value in arr</span>
+<span class="lineno"> 4</span> <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 5</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="lineno"> 6</span> <span class="p">};</span>
+<span class="lineno"> 7</span> <span class="c1">//0 4</span>
+<span class="lineno"> 8</span> <span class="c1">//1 3</span>
+<span class="lineno"> 9</span> <span class="c1">//2 2</span>
+<span class="lineno">10</span> <span class="c1">//3 1</span>
+</code></pre></div>
+
+<p>Practice with the for loop until you understand how exactly it works. Any questions? Just comment!</p>
 
 
   </div><!-- /.entry-content -->
@@ -197,6 +234,12 @@
       <li>
         
           <a href="http://maseh87.github.io/page3">3</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="http://maseh87.github.io/page4">4</a>
         
       </li>
     

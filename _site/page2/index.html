@@ -81,7 +81,7 @@
 			<a href="#">About</a>
 			<ul class="dl-submenu">
 				<li>
-					<img src="http://maseh87.github.io/images/avatar.jpg" alt="Mason Hargrove photo" class="author-photo">
+					<img src="http://maseh87.github.io/images/me.jpg" alt="Mason Hargrove photo" class="author-photo">
 					<h4>Mason Hargrove</h4>
 					<p>Knowledge is Power</p>
 				</li>
@@ -138,41 +138,93 @@
   
 <article class="hentry">
   <header>
-    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-04-10T00:00:00-07:00"><a href="http://maseh87.github.io/pseudocode-tips/">April 10, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/pseudocode-tips/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-04-16T00:00:00-07:00"><a href="http://maseh87.github.io/bubble-sort/">April 16, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/bubble-sort/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="http://maseh87.github.io/pseudocode-tips/" rel="bookmark" title="Tips on using Pseudocode" itemprop="url">Tips on using Pseudocode</a></h1>
+      <h1 class="entry-title"><a href="http://maseh87.github.io/bubble-sort/" rel="bookmark" title="Bubble Sort" itemprop="url">Bubble Sort</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>Here is some tips on writing pseudocode effectively to help you move forward in programming and take some difficulty out of the road ahead.</p>
+    <p>Bubble Sort is one of the easiest sorting algorithms to understand and wrap your head around. It iterates through a list and moves the largest number to the end of the list and repeats the process until the list is fully sorted. This is not a good way to sort a very large list and this way of sorting is the least efficient but it is a great introduction to the different sorting techniques used in programming.</p>
 
-<p>So first let’s define what pseudocode is and what it is used for. Wikipedia defines pseudocode as an informal high-level description of the operating principle of a computer program or other algorithm. Now that we have that out of the way lets break it down to what it is to normal people like us. Pseudocode, to me, is notes in my text editor that do not get ran as code.</p>
+<p>[5,4,3,2,1]</p>
 
-<p>I have been through quite a few interviews that require me to demonstrate my ability to program and I have always had something come up that throw me off the problem at hand. It wasn’t until recently that I discovered the power in pseudocode and how it will guide you to solving problems whether at home or in a pressure filled interview in the future.</p>
+<p>This array is the worst case scenario when it comes to an array being unsorted. So the first step to sorting this is to move the largest number to the end of the array.</p>
 
-<p>It it very common while programming to get thrown off your path and buried in random sublime colors and feel like you will never find the surface. So imagine you are doing an interview with someone you have never met and they ask you write a function named add that takes two numbers together, adds them and returns the sum. Sounds easy right? Now imagine you are interviewing for a high paying job that you want more than anything and you are so nervous you can’t think straight. So he’s waiting and you are stuck because you forgot what he said, your pits are sweating, your mouth just turned into cotton and you look like Maury just said you are the father! How do you get your mind rolling? Let’s write some pseudocode to get it started…</p>
-
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="cm">/*First step, make a function named add</span>
-<span class="lineno">2</span> <span class="cm">  add takes 2 numbers</span>
-<span class="lineno">3</span> <span class="cm">  the function will add the 2 numbers</span>
-<span class="lineno">4</span> <span class="cm">  then return the sum</span>
-<span class="lineno">5</span> <span class="cm">*/</span>
-<span class="lineno">6</span>  
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span> <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+<span class="lineno"> 2</span> <span class="nx">smallerNum</span><span class="p">;</span>
+<span class="lineno"> 3</span> <span class="kd">var</span> <span class="nx">BubbleSort</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 4</span>   <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 5</span>     <span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+<span class="lineno"> 6</span>       <span class="nx">smallerNum</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+<span class="lineno"> 7</span>       <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="lineno"> 8</span>       <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">smallerNum</span><span class="p">;</span>
+<span class="lineno"> 9</span>     <span class="p">}</span>
+<span class="lineno">10</span>   <span class="p">}</span>
+<span class="lineno">11</span>   <span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+<span class="lineno">12</span> <span class="p">};</span>
+<span class="lineno">13</span> <span class="c1">//output = [4,3,2,1,5];</span>
 </code></pre></div>
 
-<p>Now there is no limit to the pseudocode you can write. This is all about what will make you visualize the issue in steps instead of one big problem. Obviously this is not a super difficult function to create but if you are a beginner and you have never been exposed to programming in front of others this is one of the biggest tools you can use to help you impress your interviewer and get your mind back on track. So let’s follow our steps and create the function he asked for…</p>
+<p>The function BubbleSort will iterate over the list once and swap the numbers until the largest one is at the end of the list. This code will obviously stop after the largest has been moved but we want to keep iterating over the list until the entire list is sorted. One way we can do that is by putting a loop inside another loop.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//First step, make a function named add</span>
-<span class="lineno">2</span> <span class="c1">//add takes 2 numbers</span>
-<span class="lineno">3</span> <span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">4</span> <span class="c1">//the function will add the 2 numbers</span>
-<span class="lineno">5</span> <span class="c1">//then return the sum</span>
-<span class="lineno">6</span>   <span class="k">return</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span><span class="p">;</span>
-<span class="lineno">7</span> <span class="p">};</span>
-<span class="lineno">8</span>  
+<ul>
+  <li>var arr = [1,2];</li>
+</ul>
+
+<p>for(var i = 0; i &lt; arr.length; i++) {
+  for(var j = 0; j &lt; arr.length; j++) {
+    console.log(‘i ‘ + i + ‘ j ‘ + j);
+  }
+}</p>
+
+<p>This will be printed</p>
+
+<ul>
+  <li>i = 0  j = 0</li>
+  <li>i = 0  j = 1</li>
+  <li>i = 0  j = 2</li>
+  <li>i = 1  j  = 0</li>
+  <li>i = 1  j = 1</li>
+  <li>i = 1  j = 2 etc…</li>
+</ul>
+
+<p>So for one iteration of i it will iterate over until j = arr.length and then i will count up. That is how we will compare all of the numbers until the list is sorted.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span> <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+<span class="lineno"> 2</span> <span class="nx">smallerNum</span><span class="p">;</span>
+<span class="lineno"> 3</span> <span class="kd">var</span> <span class="nx">BubbleSort</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 4</span>   <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 5</span>     <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 6</span>       <span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+<span class="lineno"> 7</span>         <span class="nx">smallerNum</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+<span class="lineno"> 8</span>         <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[];</span>
+<span class="lineno"> 9</span>         <span class="nx">arr</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">smallerNum</span><span class="p">;</span>
+<span class="lineno">10</span>       <span class="p">}</span>
+<span class="lineno">11</span>     <span class="p">}</span>
+<span class="lineno">12</span>   <span class="p">}</span>
+<span class="lineno">13</span>   <span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+<span class="lineno">14</span> <span class="p">};</span>
+<span class="lineno">15</span> <span class="c1">//output = [1,2,3,4,5]</span>
 </code></pre></div>
 
-<p>Everyone uses pseudocode in their code no matter how much experience they have at programming. It is a truly powerful and useful tool to practice. Please let me know your techniques that have helped you along the way…</p>
+<p>So this is how the loops are working together.
+1st i iteration
+  i = 0, j = 0  [5,4,3,2,1]
+  if (5 &gt; 4) //this is true so we swap the numbers
+  i = 0, j = 1  [4,5,3,2,1]
+  if (5 &gt; 3) // this is also true, swap them
+  i = 0, j = 2  [4,3,5,2,1]
+  if (5 &gt; 2) // true so swap
+  i = 0, j = 3  [4,3,2,5,1]
+  if (5 &gt; 1) // another true statement swap them
+  i = 0, j = 4  [4,3,2,1,5]
+  //j = arr.length - 1 so exit the second loop
+2nd i iteration
+  i = 1, j = 0  [4,3,2,1,5]
+  if (4 &gt; 3)  //true so swap
+  etc…</p>
+
+<p>You can see how the larger the array becomes the longer it will take to complete this way of sorting. There are a few tweeks we can make to make this function work a little faster but this is the basic idea of how bubble sort works.</p>
 
 
   </div><!-- /.entry-content -->
@@ -180,40 +232,27 @@
 
 <article class="hentry">
   <header>
-    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-03-26T00:00:00-07:00"><a href="http://maseh87.github.io/array-prototype/">March 26, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/array-prototype/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-04-15T00:00:00-07:00"><a href="http://maseh87.github.io/30-day-challenge/">April 15, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/30-day-challenge/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="http://maseh87.github.io/array-prototype/" rel="bookmark" title="The Array's prototype (part 1)" itemprop="url">The Array's prototype (part 1)</a></h1>
+      <h1 class="entry-title"><a href="http://maseh87.github.io/30-day-challenge/" rel="bookmark" title="My 30 day Challenge" itemprop="url">My 30 day Challenge</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>I have been a little confused on what .prototype means and what is it for. When I first looking in to exactly what it is a good friend of mine explained that I should think about the word prototype as a bag of methods. At the time I didn’t understand it fully but I have gotten a pretty good grasp on what it is and what it does.</p>
+    <p>I have been programming for a little over 6 months and despite making great progress I feel that I can do more. A tricky part of programming is to realizing when you aren’t making any forward progress in your work. By saying forward progress I mean writing code that is relevant to anything, contributing to some sort of project or creating something at all. It is very easy to get caught up in researching and not getting back to what you were searching for in the first place. After spending too many hours one night researching a few problems, I closed my laptop at about 2 in the morning with absolutely no code to show for it. So I decided to change my way of working…</p>
 
-<p>Actually, to think of prototype as a bag of methods is a very good way of describing it. There are a few methods that you can use on all arrays within Javascript such as, .pop, .push, .shift, .unshift etc… Those methods were built on the Array class’ prototype already by JS.</p>
+<p>I stumbled on a blog site from a guy name John Resig and one post is about writing code everyday. If you don’t know who John Resig is he is the creator of a little thing called Jquery. Needless to say but if he has advice I am gonna take it. You can read his article <a href="http://ejohn.org/blog/write-code-every-day/">here</a>.</p>
 
-<p>Still a little confused? It’s ok. To get an even better understanding we are gonna make our own method using Array.prototype.</p>
+<p>I am gonna challenge myself to the same thing for 30 days. I am going to follow basically the same rules he had.</p>
 
-<p>The first one we will make is the .push method. Push is actually just a function that takes a value and pushes it into the last index on the array it is called on.</p>
+<ol>
+  <li>I must write code every day. I can write docs, or blog posts, or other things but it must be in addition to the code that I write.</li>
+  <li>It must be useful code. No tweaking indentation, no code re-formatting, and if at all possible no refactoring. (All these things are permitted, but not as the exclusive work of the day.)</li>
+  <li>All code must be written before midnight.</li>
+  <li>The code must be Open Source and up on Github.</li>
+</ol>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span>  
-<span class="lineno"> 2</span> <span class="c1">//we will use Array.prototype to write out our function</span>
-<span class="lineno"> 3</span> <span class="c1">//the keyword add is the name of the method I am creating.</span>
-<span class="lineno"> 4</span> <span class="c1">//I didn&#39;t name it push because it is already created...get it?</span>
-<span class="lineno"> 5</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno"> 6</span>   <span class="c1">//the word &#39;this&#39; refers to the array you are calling .add on</span>
-<span class="lineno"> 7</span>   <span class="k">this</span><span class="p">[</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
-<span class="lineno"> 8</span>   <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span>
-<span class="lineno"> 9</span> <span class="p">};</span>
-<span class="lineno">10</span> <span class="c1">//create an array</span>
-<span class="lineno">11</span> <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
-<span class="lineno">12</span> <span class="c1">//test out our new method</span>
-<span class="lineno">13</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-<span class="lineno">14</span> <span class="o">--&gt;</span><span class="mi">3</span>
-<span class="lineno">15</span> <span class="c1">//lets check out our array</span>
-<span class="lineno">16</span> <span class="nx">arr</span>
-<span class="lineno">17</span> <span class="o">--&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-</code></pre></div>
+<p>Sounds pretty simple. Follow me for 30 days and see how I progress.</p>
 
-<p>Now we have created a new prototype on the Array class and named it add, but there are a few other stipulations that the native .push has that our method does not. In our current function we are only allowed to insert one value in. The native .push method allows you to add as many as you choose. In part 2 we will go over how to optimize our function to perform exactly like the push method…</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -241,6 +280,12 @@
       <li>
         
           <a href="http://maseh87.github.io/page3">3</a>
+        
+      </li>
+    
+      <li>
+        
+          <a href="http://maseh87.github.io/page4">4</a>
         
       </li>
     

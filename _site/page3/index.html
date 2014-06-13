@@ -81,7 +81,7 @@
 			<a href="#">About</a>
 			<ul class="dl-submenu">
 				<li>
-					<img src="http://maseh87.github.io/images/avatar.jpg" alt="Mason Hargrove photo" class="author-photo">
+					<img src="http://maseh87.github.io/images/me.jpg" alt="Mason Hargrove photo" class="author-photo">
 					<h4>Mason Hargrove</h4>
 					<p>Knowledge is Power</p>
 				</li>
@@ -138,56 +138,82 @@
   
 <article class="hentry">
   <header>
-    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-03-10T00:00:00-07:00"><a href="http://maseh87.github.io/arguments-object/">March 10, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/arguments-object/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-04-10T00:00:00-07:00"><a href="http://maseh87.github.io/pseudocode-tips/">April 10, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/pseudocode-tips/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="http://maseh87.github.io/arguments-object/" rel="bookmark" title="The Arguments Object" itemprop="url">The Arguments Object</a></h1>
+      <h1 class="entry-title"><a href="http://maseh87.github.io/pseudocode-tips/" rel="bookmark" title="Tips on using Pseudocode" itemprop="url">Tips on using Pseudocode</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>If you are still a young buck in the Javascript game, like myself, then maybe I can share a newfound
-trick I learned while creating functions.</p>
+    <p>Here is some tips on writing pseudocode effectively to help you move forward in programming and take some difficulty out of the road ahead.</p>
 
-<p>For practice I was recreating a few of the most commonly used array methods like .pop, .push, .shift and .unshift to get a really good understanding on how methods work in Javascript. For example, the .push method allows you to pass in a value and it will add that value to the end of the array you specified. Like so…</p>
+<p>So first let’s define what pseudocode is and what it is used for. Wikipedia defines pseudocode as an informal high-level description of the operating principle of a computer program or other algorithm. Now that we have that out of the way lets break it down to what it is to normal people like us. Pseudocode, to me, is notes in my text editor that do not get ran as code.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//create a new array</span>
-<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="lineno">3</span> 
-<span class="lineno">4</span> <span class="c1">//use the push method to add a new value to the END of the array</span>
-<span class="lineno">5</span> <span class="nx">array</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<span class="lineno">6</span> 
-<span class="lineno">7</span> <span class="c1">//array will now be this</span>
-<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
+<p>I have been through quite a few interviews that require me to demonstrate my ability to program and I have always had something come up that throw me off the problem at hand. It wasn’t until recently that I discovered the power in pseudocode and how it will guide you to solving problems whether at home or in a pressure filled interview in the future.</p>
+
+<p>It it very common while programming to get thrown off your path and buried in random sublime colors and feel like you will never find the surface. So imagine you are doing an interview with someone you have never met and they ask you write a function named add that takes two numbers together, adds them and returns the sum. Sounds easy right? Now imagine you are interviewing for a high paying job that you want more than anything and you are so nervous you can’t think straight. So he’s waiting and you are stuck because you forgot what he said, your pits are sweating, your mouth just turned into cotton and you look like Maury just said you are the father! How do you get your mind rolling? Let’s write some pseudocode to get it started…</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="cm">/*First step, make a function named add</span>
+<span class="lineno">2</span> <span class="cm">  add takes 2 numbers</span>
+<span class="lineno">3</span> <span class="cm">  the function will add the 2 numbers</span>
+<span class="lineno">4</span> <span class="cm">  then return the sum</span>
+<span class="lineno">5</span> <span class="cm">*/</span>
+<span class="lineno">6</span>  
 </code></pre></div>
 
-<p>The .push method can take as many values as you give it and they will be ‘pushed’ in order to the end of the array you specify. That is when I discovered the arguments object. If you are making a function to take an unspecified amount of arguments like the .push method you can use the arguments object within your function to get the number of arguments that are being passed in.</p>
+<p>Now there is no limit to the pseudocode you can write. This is all about what will make you visualize the issue in steps instead of one big problem. Obviously this is not a super difficult function to create but if you are a beginner and you have never been exposed to programming in front of others this is one of the biggest tools you can use to help you impress your interviewer and get your mind back on track. So let’s follow our steps and create the function he asked for…</p>
 
-<p>Every function has access to the arguments object by default and when it is returned it looks like an array with the arguments listed as the elements of that array. Although it appears to look like an array it is does not act exactly like an array. It’s a little confusing but it can be useful if you need to determine the number of arguments that are passed into your function.</p>
-
-<p>Let’s see it in action to get a better understanding…</p>
-
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//declare a function and console.log the arguments object inside</span>
-<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="lineno">3</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
-<span class="lineno">4</span> <span class="p">};</span>
-<span class="lineno">5</span> <span class="c1">//call the function test and pass it a few arguments</span>
-<span class="lineno">6</span> <span class="nx">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">);</span>
-<span class="lineno">7</span> <span class="c1">//the end result</span>
-<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">]</span>
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//First step, make a function named add</span>
+<span class="lineno">2</span> <span class="c1">//add takes 2 numbers</span>
+<span class="lineno">3</span> <span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">4</span> <span class="c1">//the function will add the 2 numbers</span>
+<span class="lineno">5</span> <span class="c1">//then return the sum</span>
+<span class="lineno">6</span>   <span class="k">return</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span><span class="p">;</span>
+<span class="lineno">7</span> <span class="p">};</span>
+<span class="lineno">8</span>  
 </code></pre></div>
 
-<p>The arguments object definitely looks like an array but you cannot treat it exactly like an array. The only method you can use on the arguments object is length, which can be useful if you need to loop through each argument individually or just find out how many arguments are being passed in.</p>
+<p>Everyone uses pseudocode in their code no matter how much experience they have at programming. It is a truly powerful and useful tool to practice. Please let me know your techniques that have helped you along the way…</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//declare a function and console.log the length of the arguments object</span>
-<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="lineno">3</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-<span class="lineno">4</span> <span class="p">};</span>
-<span class="lineno">5</span> <span class="c1">//call the function test and pass it a few arguments</span>
-<span class="lineno">6</span> <span class="nx">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">);</span>
-<span class="lineno">7</span> <span class="c1">//the end result</span>
-<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="mi">3</span>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    <div class="entry-meta"><span class="entry-date date published updated"><time datetime="2014-03-26T00:00:00-07:00"><a href="http://maseh87.github.io/array-prototype/">March 26, 2014</a></time></span><span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>&nbsp; &bull; &nbsp;<span class="entry-comments"><a href="http://maseh87.github.io/array-prototype/#disqus_thread">Comment</a></span></div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="http://maseh87.github.io/array-prototype/" rel="bookmark" title="The Array's prototype (part 1)" itemprop="url">The Array's prototype (part 1)</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>I have been a little confused on what .prototype means and what is it for. When I first looking in to exactly what it is a good friend of mine explained that I should think about the word prototype as a bag of methods. At the time I didn’t understand it fully but I have gotten a pretty good grasp on what it is and what it does.</p>
+
+<p>Actually, to think of prototype as a bag of methods is a very good way of describing it. There are a few methods that you can use on all arrays within Javascript such as, .pop, .push, .shift, .unshift etc… Those methods were built on the Array class’ prototype already by JS.</p>
+
+<p>Still a little confused? It’s ok. To get an even better understanding we are gonna make our own method using Array.prototype.</p>
+
+<p>The first one we will make is the .push method. Push is actually just a function that takes a value and pushes it into the last index on the array it is called on.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span>  
+<span class="lineno"> 2</span> <span class="c1">//we will use Array.prototype to write out our function</span>
+<span class="lineno"> 3</span> <span class="c1">//the keyword add is the name of the method I am creating.</span>
+<span class="lineno"> 4</span> <span class="c1">//I didn&#39;t name it push because it is already created...get it?</span>
+<span class="lineno"> 5</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 6</span>   <span class="c1">//the word &#39;this&#39; refers to the array you are calling .add on</span>
+<span class="lineno"> 7</span>   <span class="k">this</span><span class="p">[</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+<span class="lineno"> 8</span>   <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">length</span>
+<span class="lineno"> 9</span> <span class="p">};</span>
+<span class="lineno">10</span> <span class="c1">//create an array</span>
+<span class="lineno">11</span> <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
+<span class="lineno">12</span> <span class="c1">//test out our new method</span>
+<span class="lineno">13</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="lineno">14</span> <span class="o">--&gt;</span><span class="mi">3</span>
+<span class="lineno">15</span> <span class="c1">//lets check out our array</span>
+<span class="lineno">16</span> <span class="nx">arr</span>
+<span class="lineno">17</span> <span class="o">--&gt;</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 </code></pre></div>
 
-<p>There are a ton of different uses for the arguments object and by knowing it exists could save you some time and stress while programming. You can read more about it on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">MDN</a> or <a href="http://devdocs.io/javascript/functions_and_function_scope/arguments">DevDocs</a>. Feel free to reach out with any questions or inputs!</p>
+<p>Now we have created a new prototype on the Array class and named it add, but there are a few other stipulations that the native .push has that our method does not. In our current function we are only allowed to insert one value in. The native .push method allows you to add as many as you choose. In part 2 we will go over how to optimize our function to perform exactly like the push method…</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -218,9 +244,15 @@ trick I learned while creating functions.</p>
         
       </li>
     
+      <li>
+        
+          <a href="http://maseh87.github.io/page4">4</a>
+        
+      </li>
+    
   </ul>
   
-    Next
+    <a href="http://maseh87.github.io/page4" class="btn">Next</a>
   
 </div><!-- /.pagination -->
 </div><!-- /#main -->
