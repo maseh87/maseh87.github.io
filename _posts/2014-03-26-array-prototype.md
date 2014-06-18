@@ -1,8 +1,8 @@
 ---
 layout: post
-title: The Array's prototype (part 1)
+title: The Array's prototype
 description: "Get a better understanding of Array.prototype"
-modified: 2014-03-26
+modified: 2014-05-26
 tags: [array, prototype]
 image:
   feature: so-simple-sample-image-2.jpg
