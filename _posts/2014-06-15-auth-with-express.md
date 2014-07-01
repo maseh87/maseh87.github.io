@@ -12,7 +12,7 @@ share: true
 
 How do you do simple authentication using an Express server?
 
-First let's set up a basic express server... (if you have never used express read <div markdown="0"><a href="./2014-06-28-node-server.md" class="btn">this</a></div> to get started)
+First let's set up a basic express server... if you have never used express read [this](2014-06-15-node-server.md) to get started.
 
 
 
