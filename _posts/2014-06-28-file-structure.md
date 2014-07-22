@@ -42,7 +42,7 @@ To give you a better understanding here is a visual example of how our Ionic app
 </figure>
 
 So lets set up our files to better respresent how our app is already structured.
-
+{% highlight javascript linenos %} {% raw %}
 www
   -> css
   -> img
@@ -63,6 +63,7 @@ www
       -> friends (tash.friends state)
             friends.html
             friends.js
+{% endraw %} {% endhighlight %}
 
 Now each state has it's own folder. Inside each folder contains the states template and controller located in it's respective .js file. The tabs state is located inside of the tabs folder. Each of it's children have their own folders inside the tabs folder. Now if you want to add a new view or had to debug for example you can navigate through your files with ease. This way of structure allows your application to grow as you add more features. This convention will also help you reduce merge conflicts while working in teams on a project. Each team member can work in their own folders without changing the same files. (If you haven't experienced this problem, you will!)
 
