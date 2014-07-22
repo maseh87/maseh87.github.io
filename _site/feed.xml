@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">Mase/blog.js</title>
+
+
+
+  
+
+<title type="text">Mason's Blog About Javascript</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://maseh87.github.io/feed.xml" />
-<link rel="alternate" type="text/html" href="http://maseh87.github.io" />
-<updated>2014-06-12T22:03:06-07:00</updated>
+<link rel="alternate" type="text/html" href="http://maseh87.github.io/" />
+<updated>2014-07-22T02:09:43-04:00</updated>
 <id>http://maseh87.github.io/</id>
 <author>
   <name>Mason Hargrove</name>
@@ -14,105 +19,309 @@
 
 
 <entry>
-  <title type="html"><![CDATA[Automatically Sorted Objects in Javascript]]></title>
- <link rel="alternate" type="text/html" href="http://maseh87.github.io/Javascript-Objects-in-V8/" />
-  <id>http://maseh87.github.io/Javascript-Objects-in-V8</id>
-  <updated>2014-03-31T00:00:00-00:00</updated>
-  <published>2014-04-22T00:00:00-07:00</published>
+  <title type="html"><![CDATA[Create a node server using Express]]></title>
+  <link rel="alternate" type="text/html" href="http://maseh87.github.io/node-server/"/>
+  <id>http://maseh87.github.io/node-server</id>
+  <updated>2014-03-26T00:00:00-00:00</updated>
+  <published>2014-06-28T00:00:00-04:00</published>
   
   <author>
     <name>Mason Hargrove</name>
     <uri>http://maseh87.github.io</uri>
     <email>maseh87@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;I recently stumbled across something I thought was a known fact about Javascript. Turns out that it isn’t. During one of my late night study sessions I found out that a javascript object automatically sorts an object if the property is a number.&lt;/p&gt;
+  <category scheme="http://maseh87.github.io/tags/#server" term="server" /><category scheme="http://maseh87.github.io/tags/#javascript" term="javascript" /><category scheme="http://maseh87.github.io/tags/#node" term="node" />
+  <content type="html">
+  
+    &lt;p&gt;Creating a server using Node can be pretty confusing and time consuming depending on the size of your application. Luckily there is a simple and easy way to make your server using Express.&lt;/p&gt;
 
-&lt;p&gt;Let me explain in a little more detail…&lt;/p&gt;
+&lt;p&gt;One main feature you will most likely want out of your server is providing your static assets to the browser so they can be rendered for viewing. When trying to accomplish this with only node it is, in my opinion, annoying. This is the way to do it in Express.&lt;/p&gt;
 
-&lt;p&gt;If you set the key to a number and the value to any value in javascript it will sort them numerically automatically. If the object has some properties that are numbers and some are strings it will automatically sort the number properties and put the other properties after.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Mason&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//call obj&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//it will return&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Mason&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//first require our express files&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;express&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//next invoke our express function so we can have access to the express&amp;#39; object properties&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;path/to/your/static/asset&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//specifies what port your asset will be on&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//just a message telling yourself that the server is running correctly&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Listening on port 3k&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;I have read up on this and found out that this is something that Chrome’s engine, V8, does by default. I thought this was very interesting. Feel free to input if you have any more knowledge of how Chrome reads Javascript or thoughts!&lt;/p&gt;
+&lt;p&gt;Inside the express.static you will give the path to your static asset. Your static assets will be any files that you want to be rendered in the browser for viewing, for example your index.html page. If you include __dirname + /a/path it can save you a few lines of code. This will also correctly serve any script tags or links that your static asset has included.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/Javascript-Objects-in-V8/&quot;&gt;Automatically Sorted Objects in Javascript&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mase/blog.js&lt;/a&gt; on April 22, 2014.&lt;/p&gt;</content>
+&lt;p&gt;Express also has great middleware options. One very useful middleware package is morgan. Morgan is a logger middleware that will display in your terminal all requests made to your server. Morgan takes one argument that can be 4 different options. The most useful is the ‘dev’ argument. When provided that morgan will log ever output that will colored by the different response status’. Extremely useful when you run into bugs.&lt;/p&gt;
+
+&lt;p&gt;How to include morgan&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;express&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;morgan&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;morgan&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;morgan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;dev&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//yes its that simple&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;path/to/your/static/asset&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Listening on port 3k&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Express will save you a ton of time when creating your servers and I highly recommend using it. Tell me your techniques when creating your own servers below.&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/node-server/&quot;&gt;Create a node server using Express&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on June 28, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
-  <title type="html"><![CDATA[Helpful Javascript Programming Tips pt 1]]></title>
- <link rel="alternate" type="text/html" href="http://maseh87.github.io/for-loops/" />
-  <id>http://maseh87.github.io/for-loops</id>
-  <updated>2014-03-31T00:00:00-00:00</updated>
-  <published>2014-04-16T00:00:00-07:00</published>
+  <title type="html"><![CDATA[Modular file structure for your Angular project]]></title>
+  <link rel="alternate" type="text/html" href="http://maseh87.github.io/file-structure/"/>
+  <id>http://maseh87.github.io/file-structure</id>
+  <updated>2014-03-26T00:00:00-00:00</updated>
+  <published>2014-06-28T00:00:00-04:00</published>
   
   <author>
     <name>Mason Hargrove</name>
     <uri>http://maseh87.github.io</uri>
     <email>maseh87@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Loops can be very confusing if you are researching online for an answer so I will try to clear a few things up with the Javascript for loop. If you plan on learning Javascript you will write a ton of for loops and the quicker you understand how they work the faster you can start doing awesome things with code.&lt;/p&gt;
+  <category scheme="http://maseh87.github.io/tags/#ionic" term="ionic" /><category scheme="http://maseh87.github.io/tags/#angular" term="angular" /><category scheme="http://maseh87.github.io/tags/#scaffold" term="scaffold" />
+  <content type="html">
+  
+    &lt;p&gt;Alright boys and girls, I am going to give you an example on how I structure my Angular projects. I will be using the starter tabs app given to you by Ionic for this tutorial. If you don’t know what Ionic is click this link and check it out, it is the new hotness to say the least.&lt;/p&gt;
 
-&lt;p&gt;A for loop take 3 things and each one means something specific. The first thing inside the parentheses is a starting point of your loop, the second is where you want the loop to stop and the third is the iteration or how much the loop increases everytime. So let’s write it so you can see what is happening…&lt;/p&gt;
+&lt;p&gt;After you have you have scaffolded out your new Ionic tabs app, inside of your www folder is where we will doing all of the work. Ionic provides you with a good base structure to get started but it can get very cluttered quickly as your app grows. The current folder layout is structured like this.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//basic for loop structure&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;p&gt;// The client side folder which hold all client side code
+www
+  -css
+  -img
+  -js
+    -app.js
+    -controllers.js
+    -services.js
+  -templates
+    -friend-detail.html
+    -tab-account.html
+    -tab-dash.html
+    -tab-friends.html
+    -tabs.html&lt;/p&gt;
+
+&lt;p&gt;The way we will be restructuring the files will be represented by each state declared inside the app. To learn more about states you can read about them in more detail in the ui-router’s docs here. In this structure our app has multiple states and some of those states have children states.&lt;/p&gt;
+
+&lt;p&gt;The tabs.html file holds the tabs for the footer of our application. Each tab has its own view and a state associated with it. Don’t worry if you dont understand exactly what the states are just yet, I will dive deeper into ui-router in the following blog post.&lt;/p&gt;
+
+&lt;p&gt;To give you a better understanding this is a visual example of how our Ionic app is laid out. Inside of your app.js file you will see all of the currents states and how they are structured.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/file-structure/&quot;&gt;Modular file structure for your Angular project&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on June 28, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Getting Started with Angular]]></title>
+  <link rel="alternate" type="text/html" href="http://maseh87.github.io/angular-tips/"/>
+  <id>http://maseh87.github.io/angular-tips</id>
+  <updated>2014-05-26T00:00:00-00:00</updated>
+  <published>2014-06-19T00:00:00-04:00</published>
+  
+  <author>
+    <name>Mason Hargrove</name>
+    <uri>http://maseh87.github.io</uri>
+    <email>maseh87@gmail.com</email>
+  </author>
+  <category scheme="http://maseh87.github.io/tags/#angular" term="angular" /><category scheme="http://maseh87.github.io/tags/#javascript" term="javascript" /><category scheme="http://maseh87.github.io/tags/#getting%20started" term="getting started" />
+  <content type="html">
+  
+    &lt;p&gt;If you are not sure about Angular or if you are just getting started using the framework, I am gonna run you through how to get your Angular site started and off the ground.&lt;/p&gt;
+
+&lt;p&gt;The first step when starting your Angular project is to declare where the app is gonna be inside your index.html file. (Don’t forget to add link the angular file inside your html file!!) It is as simple as adding an attribute on a current element called ng-app on an element. You should add the attribute inside the html element to basically say that anything inside the html tags will belong to Angular. Now, to separate your files and to make it as module as possible lets give the ng-app a name called ‘my-app’. You will see why we give it a name later.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;   &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;my-app&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;My Angular Site&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;lib/angular/angular.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The second thing we will make is a module for our site. The main way to define an Angular app is by creating a module. An app can have multiple modules that pertain to different site functionality but for this app we will just create one. Our module will hold all of our application code. The module will also encapsulate our code to keep our global namespace clean. In our app.js file we will write out our angular module.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;my-app&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;var i = 0 - This defines where the loop starts in this case it is 0&lt;/p&gt;
+&lt;p&gt;The module takes two parameters the name of our application that we defined in our html file and an array that will contain any dependencies you will include later in your application. The angular module has a few methods on it that do various things but the one we will do next is create a controller and a new scope.&lt;/p&gt;
 
-&lt;p&gt;i &amp;lt; 5 - When this statement becomes false the loop will stop. The loop will stop when i is equal to 4 because 5 is no longer less than 5, it is equal.&lt;/p&gt;
+&lt;p&gt;When we create a controller we explicitly create a child scope object and can attach that object to the DOM by creating a ng-controller directive on a DOM element like so…&lt;/p&gt;
 
-&lt;p&gt;i++ - This is the same thing as writing i + 1 this statement adds 1 to i everytime it loops&lt;/p&gt;
-
-&lt;p&gt;When I was explaining this to a friend of mine he was confused on why I named the variable i. I have been writing this loop so much I forgot to mention that part of it. You will see this variable name i in a lot of the places you research because when performing this loop it is normally over an array. Each time your code loops the variable i represents the index of the array you are looping through. It is just as easy to call the variable index if you want. It is up to you.&lt;/p&gt;
-
-&lt;p&gt;Whatever is inside the curly brackets will get executed for the amount of times you specify in your loop. In this loop whatever I insert in the curly brackets will get ran 5 times. Why 5? Because your loop starts at 0. 0, 1, 2, 3, 4 for a total of 5 executions.&lt;/p&gt;
-
-&lt;p&gt;The variable i is very useful when looping through arrays because you will have access to the current index and the current value through each iteration of the loop. If you are trying to get each value in an array the second statement will normally stop when i is less than the array.length. The length of an array is always 1 greater than the last index so it will always stop at the end of the specific array.&lt;/p&gt;
-
-&lt;p&gt;For Example&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//declare an array&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//loop through and console.log each index and each value in arr&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;   &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//0 4&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//1 3&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//2 2&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//3 1&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;my-app&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;FirstController&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//the controller method takes the name you want to give your controller and a callback&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//the callback gets a $scope parameter that is our root scope&amp;#39;s child object&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Practice with the for loop until you understand how exactly it works. Any questions? Just comment!&lt;/p&gt;
+&lt;p&gt;Now let’s declare our ng-controller in our index.html&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;   &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;my-app&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;My Angular Site&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-controller=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;FirstController&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;lib/angular/angular.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that your controller is created you can start binding data inside your html.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;my-app&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;FirstController&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//we add a property on $scope called age and set the value to 26&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;   &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;   &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;my-app&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;My Angular Site&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-controller=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;FirstController&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;         &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Hey I am {{ age }} years old! &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;lib/angular/angular.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Beginning an Angular project is as simple as that and can be used for a ton of stuff. Comment below if you have anymore questions or advice on Angular.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/for-loops/&quot;&gt;Helpful Javascript Programming Tips pt 1&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mase/blog.js&lt;/a&gt; on April 16, 2014.&lt;/p&gt;</content>
+  
+  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/angular-tips/&quot;&gt;Getting Started with Angular&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on June 19, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Authentication With Expressjs]]></title>
+  <link rel="alternate" type="text/html" href="http://maseh87.github.io/auth-with-express/"/>
+  <id>http://maseh87.github.io/auth-with-express</id>
+  <updated>2014-03-26T00:00:00-00:00</updated>
+  <published>2014-06-15T00:00:00-04:00</published>
+  
+  <author>
+    <name>Mason Hargrove</name>
+    <uri>http://maseh87.github.io</uri>
+    <email>maseh87@gmail.com</email>
+  </author>
+  <category scheme="http://maseh87.github.io/tags/#auth" term="auth" /><category scheme="http://maseh87.github.io/tags/#javascript" term="javascript" /><category scheme="http://maseh87.github.io/tags/#express" term="express" />
+  <content type="html">
+  
+    &lt;p&gt;How do you do simple authentication using an Express server?&lt;/p&gt;
+
+&lt;p&gt;First let’s set up a basic express server… if you have never used express read [this] to get started.&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/auth-with-express/&quot;&gt;Authentication With Expressjs&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on June 15, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[nQueens Problem]]></title>
+  <link rel="alternate" type="text/html" href="http://maseh87.github.io/nQueens/"/>
+  <id>http://maseh87.github.io/nQueens</id>
+  <updated>2014-03-31T00:00:00-00:00</updated>
+  <published>2014-06-13T00:00:00-04:00</published>
+  
+  <author>
+    <name>Mason Hargrove</name>
+    <uri>http://maseh87.github.io</uri>
+    <email>maseh87@gmail.com</email>
+  </author>
+  <category scheme="http://maseh87.github.io/tags/#javascript" term="javascript" /><category scheme="http://maseh87.github.io/tags/#recursion" term="recursion" /><category scheme="http://maseh87.github.io/tags/#nQueens" term="nQueens" />
+  <content type="html">
+  
+    &lt;p&gt;Week 2 at Hack Reactor proved to be as challenging as the first if not a little tougher. We were introduced to a new excercise which was to solve the nQueens problem. The n stands for the set number of queens placed on an n x n board. The queens have to be placed on the board so that they do cannot attack each other on the first move. The idea is very easy to understand. The real trick is returning every possible board configuration each time.&lt;/p&gt;
+
+&lt;p&gt;During our excercise we were given an already set up version of how the program should work. It was up to us to figure out how to create the boards and return the number of possible boards that n could configure.&lt;/p&gt;
+
+&lt;p&gt;A board is represented by an arrays within an array.&lt;/p&gt;
+
+&lt;p&gt;//an example of the chessboard if n = 5&lt;/p&gt;
+
+&lt;p&gt;[[1,0,0,0,0],
+ [0,0,1,0,0],
+ [0,0,0,0,1],
+ [0,1,0,0,0],
+ [0,0,0,1,0]]&lt;/p&gt;
+
+&lt;p&gt;0’s represent an empty space and the 1 represents a queen. Queens can move horizontally, vertically and also in all diagonals. In this case none of the queens can attack each other on the first turn, so this is a succesfully board. If this function were completely finished if n = 5 there are 10 possible solutions to the problem.&lt;/p&gt;
+
+&lt;p&gt;nQueens is a very unique problem to solve due to the fact that there is no easy or quick way to solve it. This problem has exponential time complexity when trying to solve it and can crash your computer if you try to input a high number. To date, I believe nQueens has only been solved up to a 26 x 26 board. To give you an idea of how hard this problem is on your computer a 23 x 23 board has 2,423,393,764,440 different solutionas.&lt;/p&gt;
+
+&lt;p&gt;If you have a trick that you implemented or a question about how to go about solving nQueens leave me a comment or share this with your fellow programmers.&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/nQueens/&quot;&gt;nQueens Problem&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on June 13, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Bubble Sort]]></title>
- <link rel="alternate" type="text/html" href="http://maseh87.github.io/bubble-sort/" />
+  <link rel="alternate" type="text/html" href="http://maseh87.github.io/bubble-sort/"/>
   <id>http://maseh87.github.io/bubble-sort</id>
   <updated>2014-04-16T00:00:00-00:00</updated>
-  <published>2014-04-16T00:00:00-07:00</published>
+  <published>2014-04-16T00:00:00-04:00</published>
   
   <author>
     <name>Mason Hargrove</name>
     <uri>http://maseh87.github.io</uri>
     <email>maseh87@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Bubble Sort is one of the easiest sorting algorithms to understand and wrap your head around. It iterates through a list and moves the largest number to the end of the list and repeats the process until the list is fully sorted. This is not a good way to sort a very large list and this way of sorting is the least efficient but it is a great introduction to the different sorting techniques used in programming.&lt;/p&gt;
+  <category scheme="http://maseh87.github.io/tags/#array" term="array" /><category scheme="http://maseh87.github.io/tags/#sorting" term="sorting" /><category scheme="http://maseh87.github.io/tags/#bubble%20sort" term="bubble sort" /><category scheme="http://maseh87.github.io/tags/#algorithms" term="algorithms" />
+  <content type="html">
+  
+    &lt;p&gt;Bubble Sort is one of the easiest sorting algorithms to understand and wrap your head around. It iterates through a list and moves the largest number to the end of the list and repeats the process until the list is fully sorted. This is not a good way to sort a very large list and this way of sorting is the least efficient but it is a great introduction to the different sorting techniques used in programming.&lt;/p&gt;
 
 &lt;p&gt;[5,4,3,2,1]&lt;/p&gt;
 
@@ -195,102 +404,27 @@
 &lt;p&gt;You can see how the larger the array becomes the longer it will take to complete this way of sorting. There are a few tweeks we can make to make this function work a little faster but this is the basic idea of how bubble sort works.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/bubble-sort/&quot;&gt;Bubble Sort&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mase/blog.js&lt;/a&gt; on April 16, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[My 30 day Challenge]]></title>
- <link rel="alternate" type="text/html" href="http://maseh87.github.io/30-day-challenge/" />
-  <id>http://maseh87.github.io/30-day-challenge</id>
-  <updated>2013-05-31T00:00:00-00:00</updated>
-  <published>2014-04-15T00:00:00-07:00</published>
   
-  <author>
-    <name>Mason Hargrove</name>
-    <uri>http://maseh87.github.io</uri>
-    <email>maseh87@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;I have been programming for a little over 6 months and despite making great progress I feel that I can do more. A tricky part of programming is to realizing when you aren’t making any forward progress in your work. By saying forward progress I mean writing code that is relevant to anything, contributing to some sort of project or creating something at all. It is very easy to get caught up in researching and not getting back to what you were searching for in the first place. After spending too many hours one night researching a few problems, I closed my laptop at about 2 in the morning with absolutely no code to show for it. So I decided to change my way of working…&lt;/p&gt;
-
-&lt;p&gt;I stumbled on a blog site from a guy name John Resig and one post is about writing code everyday. If you don’t know who John Resig is he is the creator of a little thing called Jquery. Needless to say but if he has advice I am gonna take it. You can read his article &lt;a href=&quot;http://ejohn.org/blog/write-code-every-day/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I am gonna challenge myself to the same thing for 30 days. I am going to follow basically the same rules he had.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;I must write code every day. I can write docs, or blog posts, or other things but it must be in addition to the code that I write.&lt;/li&gt;
-  &lt;li&gt;It must be useful code. No tweaking indentation, no code re-formatting, and if at all possible no refactoring. (All these things are permitted, but not as the exclusive work of the day.)&lt;/li&gt;
-  &lt;li&gt;All code must be written before midnight.&lt;/li&gt;
-  &lt;li&gt;The code must be Open Source and up on Github.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Sounds pretty simple. Follow me for 30 days and see how I progress.&lt;/p&gt;
-
-
-  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/30-day-challenge/&quot;&gt;My 30 day Challenge&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mase/blog.js&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/bubble-sort/&quot;&gt;Bubble Sort&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on April 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
-  <title type="html"><![CDATA[Tips on using Pseudocode]]></title>
- <link rel="alternate" type="text/html" href="http://maseh87.github.io/pseudocode-tips/" />
-  <id>http://maseh87.github.io/pseudocode-tips</id>
-  <updated>2014-03-31T00:00:00-00:00</updated>
-  <published>2014-04-10T00:00:00-07:00</published>
-  
-  <author>
-    <name>Mason Hargrove</name>
-    <uri>http://maseh87.github.io</uri>
-    <email>maseh87@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;Here is some tips on writing pseudocode effectively to help you move forward in programming and take some difficulty out of the road ahead.&lt;/p&gt;
-
-&lt;p&gt;So first let’s define what pseudocode is and what it is used for. Wikipedia defines pseudocode as an informal high-level description of the operating principle of a computer program or other algorithm. Now that we have that out of the way lets break it down to what it is to normal people like us. Pseudocode, to me, is notes in my text editor that do not get ran as code.&lt;/p&gt;
-
-&lt;p&gt;I have been through quite a few interviews that require me to demonstrate my ability to program and I have always had something come up that throw me off the problem at hand. It wasn’t until recently that I discovered the power in pseudocode and how it will guide you to solving problems whether at home or in a pressure filled interview in the future.&lt;/p&gt;
-
-&lt;p&gt;It it very common while programming to get thrown off your path and buried in random sublime colors and feel like you will never find the surface. So imagine you are doing an interview with someone you have never met and they ask you write a function named add that takes two numbers together, adds them and returns the sum. Sounds easy right? Now imagine you are interviewing for a high paying job that you want more than anything and you are so nervous you can’t think straight. So he’s waiting and you are stuck because you forgot what he said, your pits are sweating, your mouth just turned into cotton and you look like Maury just said you are the father! How do you get your mind rolling? Let’s write some pseudocode to get it started…&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/*First step, make a function named add&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;  add takes 2 numbers&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;  the function will add the 2 numbers&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;  then return the sum&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;*/&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now there is no limit to the pseudocode you can write. This is all about what will make you visualize the issue in steps instead of one big problem. Obviously this is not a super difficult function to create but if you are a beginner and you have never been exposed to programming in front of others this is one of the biggest tools you can use to help you impress your interviewer and get your mind back on track. So let’s follow our steps and create the function he asked for…&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//First step, make a function named add&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//add takes 2 numbers&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//the function will add the 2 numbers&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//then return the sum&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Everyone uses pseudocode in their code no matter how much experience they have at programming. It is a truly powerful and useful tool to practice. Please let me know your techniques that have helped you along the way…&lt;/p&gt;
-
-
-  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/pseudocode-tips/&quot;&gt;Tips on using Pseudocode&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mase/blog.js&lt;/a&gt; on April 10, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[The Array's prototype (part 1)]]></title>
- <link rel="alternate" type="text/html" href="http://maseh87.github.io/array-prototype/" />
+  <title type="html"><![CDATA[The Array's prototype]]></title>
+  <link rel="alternate" type="text/html" href="http://maseh87.github.io/array-prototype/"/>
   <id>http://maseh87.github.io/array-prototype</id>
-  <updated>2014-03-26T00:00:00-00:00</updated>
-  <published>2014-03-26T00:00:00-07:00</published>
+  <updated>2014-05-26T00:00:00-00:00</updated>
+  <published>2014-03-26T00:00:00-04:00</published>
   
   <author>
     <name>Mason Hargrove</name>
     <uri>http://maseh87.github.io</uri>
     <email>maseh87@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;I have been a little confused on what .prototype means and what is it for. When I first looking in to exactly what it is a good friend of mine explained that I should think about the word prototype as a bag of methods. At the time I didn’t understand it fully but I have gotten a pretty good grasp on what it is and what it does.&lt;/p&gt;
+  <category scheme="http://maseh87.github.io/tags/#array" term="array" /><category scheme="http://maseh87.github.io/tags/#prototype" term="prototype" />
+  <content type="html">
+  
+    &lt;p&gt;I have been a little confused on what .prototype means and what is it for. When I first looking in to exactly what it is a good friend of mine explained that I should think about the word prototype as a bag of methods. At the time I didn’t understand it fully but I have gotten a pretty good grasp on what it is and what it does.&lt;/p&gt;
 
 &lt;p&gt;Actually, to think of prototype as a bag of methods is a very good way of describing it. There are a few methods that you can use on all arrays within Javascript such as, .pop, .push, .shift, .unshift etc… Those methods were built on the Array class’ prototype already by JS.&lt;/p&gt;
 
@@ -319,23 +453,27 @@
 
 &lt;p&gt;Now we have created a new prototype on the Array class and named it add, but there are a few other stipulations that the native .push has that our method does not. In our current function we are only allowed to insert one value in. The native .push method allows you to add as many as you choose. In part 2 we will go over how to optimize our function to perform exactly like the push method…&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/array-prototype/&quot;&gt;The Array's prototype (part 1)&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mase/blog.js&lt;/a&gt; on March 26, 2014.&lt;/p&gt;</content>
+  
+  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/array-prototype/&quot;&gt;The Array's prototype&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on March 26, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[The Arguments Object]]></title>
- <link rel="alternate" type="text/html" href="http://maseh87.github.io/arguments-object/" />
+  <link rel="alternate" type="text/html" href="http://maseh87.github.io/arguments-object/"/>
   <id>http://maseh87.github.io/arguments-object</id>
   <updated>2014-03-31T00:00:00-00:00</updated>
-  <published>2014-03-10T00:00:00-07:00</published>
+  <published>2014-03-10T00:00:00-04:00</published>
   
   <author>
     <name>Mason Hargrove</name>
     <uri>http://maseh87.github.io</uri>
     <email>maseh87@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;If you are still a young buck in the Javascript game, like myself, then maybe I can share a newfound
+  <category scheme="http://maseh87.github.io/tags/#javascript" term="javascript" /><category scheme="http://maseh87.github.io/tags/#firstblog" term="firstblog" /><category scheme="http://maseh87.github.io/tags/#arguments" term="arguments" />
+  <content type="html">
+  
+    &lt;p&gt;If you are still a young buck in the Javascript game, like myself, then maybe I can share a newfound
 trick I learned while creating functions.&lt;/p&gt;
 
 &lt;p&gt;For practice I was recreating a few of the most commonly used array methods like .pop, .push, .shift and .unshift to get a really good understanding on how methods work in Javascript. For example, the .push method allows you to pass in a value and it will add that value to the end of the array you specified. Like so…&lt;/p&gt;
@@ -380,7 +518,8 @@ trick I learned while creating functions.&lt;/p&gt;
 
 &lt;p&gt;There are a ton of different uses for the arguments object and by knowing it exists could save you some time and stress while programming. You can read more about it on &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments&quot;&gt;MDN&lt;/a&gt; or &lt;a href=&quot;http://devdocs.io/javascript/functions_and_function_scope/arguments&quot;&gt;DevDocs&lt;/a&gt;. Feel free to reach out with any questions or inputs!&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/arguments-object/&quot;&gt;The Arguments Object&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mase/blog.js&lt;/a&gt; on March 10, 2014.&lt;/p&gt;</content>
+  
+  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/arguments-object/&quot;&gt;The Arguments Object&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on March 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

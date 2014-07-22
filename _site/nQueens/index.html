@@ -5,31 +5,31 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>The Arguments Object &#8211; Mason's Blog About Javascript</title>
-<meta name="description" content="The weird array like thing called arguments">
-<meta name="keywords" content="javascript, firstblog, arguments">
+<title>nQueens Problem &#8211; Mason's Blog About Javascript</title>
+<meta name="description" content="What is the nQueens Problem">
+<meta name="keywords" content="javascript, recursion, nQueens">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://maseh87.github.io/images/so-simple-sample-image-1.jpg">
 
-<meta name="twitter:title" content="The Arguments Object">
-<meta name="twitter:description" content="The weird array like thing called arguments">
+<meta name="twitter:title" content="nQueens Problem">
+<meta name="twitter:description" content="What is the nQueens Problem">
 <meta name="twitter:creator" content="@maseh87">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Arguments Object">
-<meta property="og:description" content="The weird array like thing called arguments">
-<meta property="og:url" content="http://maseh87.github.io/arguments-object/">
+<meta property="og:title" content="nQueens Problem">
+<meta property="og:description" content="What is the nQueens Problem">
+<meta property="og:url" content="http://maseh87.github.io/nQueens/">
 <meta property="og:site_name" content="Mason's Blog About Javascript">
 
 
 
 
 
-<link rel="canonical" href="http://maseh87.github.io/arguments-object/">
+<link rel="canonical" href="http://maseh87.github.io/nQueens/">
 <link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Mason's Blog About Javascript Feed">
 
 
@@ -104,83 +104,60 @@
 
 <div id="main" role="main">
   <article class="hentry">
-    <img src="http://maseh87.github.io/images/so-simple-sample-image-1.jpg" class="entry-feature-image" alt="The Arguments Object" >
+    <img src="http://maseh87.github.io/images/so-simple-sample-image-1.jpg" class="entry-feature-image" alt="nQueens Problem" >
     <div class="entry-wrapper">
       <header class="entry-header">
-        <span class="entry-tags"><a href="http://maseh87.github.io/tags/#javascript" title="Pages tagged javascript">javascript</a>&nbsp;&bull;&nbsp;<a href="http://maseh87.github.io/tags/#firstblog" title="Pages tagged firstblog">firstblog</a>&nbsp;&bull;&nbsp;<a href="http://maseh87.github.io/tags/#arguments" title="Pages tagged arguments">arguments</a></span>
+        <span class="entry-tags"><a href="http://maseh87.github.io/tags/#javascript" title="Pages tagged javascript">javascript</a>&nbsp;&bull;&nbsp;<a href="http://maseh87.github.io/tags/#recursion" title="Pages tagged recursion">recursion</a>&nbsp;&bull;&nbsp;<a href="http://maseh87.github.io/tags/#nQueens" title="Pages tagged nQueens">nQueens</a></span>
         
-          <h1 class="entry-title">The Arguments Object</h1>
+          <h1 class="entry-title">nQueens Problem</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://maseh87.github.io/images/me.jpg" alt="Mason Hargrove photo" class="author-photo">
         <span class="author vcard">By <span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-03-10T00:00:00-04:00"><i class="icon-calendar-empty"></i> March 10, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-06-13T00:00:00-04:00"><i class="icon-calendar-empty"></i> June 13, 2014</time></span>
         <span class="entry-date date modified"><time datetime="2014-03-31"><i class="icon-pencil"></i> March 31, 2014</time></span>
         <span class="entry-comments"><i class="icon-comment-alt"></i> <a href="#disqus_thread">Comment</a></span>
-        <span><a href="http://maseh87.github.io/arguments-object/" rel="bookmark" title="The Arguments Object"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://maseh87.github.io/nQueens/" rel="bookmark" title="nQueens Problem"><i class="icon-link"></i> Permalink</a></span>
         
         <span class="social-share-facebook">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://maseh87.github.io/arguments-object/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://maseh87.github.io/nQueens/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
         <span class="social-share-twitter">
-            <a href="https://twitter.com/intent/tweet?hashtags=&text=The Arguments Object&url=http://maseh87.github.io/arguments-object/&via=maseh87" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+            <a href="https://twitter.com/intent/tweet?hashtags=&text=nQueens Problem&url=http://maseh87.github.io/nQueens/&via=maseh87" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
         <span class="social-share-googleplus">
-            <a href="https://plus.google.com/share?url=http://maseh87.github.io/arguments-object/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <a href="https://plus.google.com/share?url=http://maseh87.github.io/nQueens/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
             <!-- /.social-share -->
       </footer>
       <div class="entry-content">
-        <p>If you are still a young buck in the Javascript game, like myself, then maybe I can share a newfound
-trick I learned while creating functions.</p>
+        <p>Week 2 at Hack Reactor proved to be as challenging as the first if not a little tougher. We were introduced to a new excercise which was to solve the nQueens problem. The n stands for the set number of queens placed on an n x n board. The queens have to be placed on the board so that they do cannot attack each other on the first move. The idea is very easy to understand. The real trick is returning every possible board configuration each time.</p>
 
-<p>For practice I was recreating a few of the most commonly used array methods like .pop, .push, .shift and .unshift to get a really good understanding on how methods work in Javascript. For example, the .push method allows you to pass in a value and it will add that value to the end of the array you specified. Like so…</p>
+<p>During our excercise we were given an already set up version of how the program should work. It was up to us to figure out how to create the boards and return the number of possible boards that n could configure.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//create a new array</span>
-<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="lineno">3</span> 
-<span class="lineno">4</span> <span class="c1">//use the push method to add a new value to the END of the array</span>
-<span class="lineno">5</span> <span class="nx">array</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<span class="lineno">6</span> 
-<span class="lineno">7</span> <span class="c1">//array will now be this</span>
-<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
-</code></pre></div>
+<p>A board is represented by an arrays within an array.</p>
 
-<p>The .push method can take as many values as you give it and they will be ‘pushed’ in order to the end of the array you specify. That is when I discovered the arguments object. If you are making a function to take an unspecified amount of arguments like the .push method you can use the arguments object within your function to get the number of arguments that are being passed in.</p>
+<p>//an example of the chessboard if n = 5</p>
 
-<p>Every function has access to the arguments object by default and when it is returned it looks like an array with the arguments listed as the elements of that array. Although it appears to look like an array it is does not act exactly like an array. It’s a little confusing but it can be useful if you need to determine the number of arguments that are passed into your function.</p>
+<p>[[1,0,0,0,0],
+ [0,0,1,0,0],
+ [0,0,0,0,1],
+ [0,1,0,0,0],
+ [0,0,0,1,0]]</p>
 
-<p>Let’s see it in action to get a better understanding…</p>
+<p>0’s represent an empty space and the 1 represents a queen. Queens can move horizontally, vertically and also in all diagonals. In this case none of the queens can attack each other on the first turn, so this is a succesfully board. If this function were completely finished if n = 5 there are 10 possible solutions to the problem.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//declare a function and console.log the arguments object inside</span>
-<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="lineno">3</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
-<span class="lineno">4</span> <span class="p">};</span>
-<span class="lineno">5</span> <span class="c1">//call the function test and pass it a few arguments</span>
-<span class="lineno">6</span> <span class="nx">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">);</span>
-<span class="lineno">7</span> <span class="c1">//the end result</span>
-<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">]</span>
-</code></pre></div>
+<p>nQueens is a very unique problem to solve due to the fact that there is no easy or quick way to solve it. This problem has exponential time complexity when trying to solve it and can crash your computer if you try to input a high number. To date, I believe nQueens has only been solved up to a 26 x 26 board. To give you an idea of how hard this problem is on your computer a 23 x 23 board has 2,423,393,764,440 different solutionas.</p>
 
-<p>The arguments object definitely looks like an array but you cannot treat it exactly like an array. The only method you can use on the arguments object is length, which can be useful if you need to loop through each argument individually or just find out how many arguments are being passed in.</p>
-
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//declare a function and console.log the length of the arguments object</span>
-<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="lineno">3</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-<span class="lineno">4</span> <span class="p">};</span>
-<span class="lineno">5</span> <span class="c1">//call the function test and pass it a few arguments</span>
-<span class="lineno">6</span> <span class="nx">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">);</span>
-<span class="lineno">7</span> <span class="c1">//the end result</span>
-<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="mi">3</span>
-</code></pre></div>
-
-<p>There are a ton of different uses for the arguments object and by knowing it exists could save you some time and stress while programming. You can read more about it on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">MDN</a> or <a href="http://devdocs.io/javascript/functions_and_function_scope/arguments">DevDocs</a>. Feel free to reach out with any questions or inputs!</p>
+<p>If you have a trick that you implemented or a question about how to go about solving nQueens leave me a comment or share this with your fellow programmers.</p>
 
         <div id="disqus_thread"></div><!-- /#disqus_thread -->
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
+        <a href="http://maseh87.github.io/bubble-sort/" class="btn" title="Bubble Sort">Previous article</a>
       
-        <a href="http://maseh87.github.io/array-prototype/" class="btn" title="The Array's prototype">Next article</a>
+      
+        <a href="http://maseh87.github.io/auth-with-express/" class="btn" title="Authentication With Expressjs">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>

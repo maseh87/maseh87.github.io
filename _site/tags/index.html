@@ -5,32 +5,32 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Tag Archive &#8211; Mase/blog.js</title>
+<title>Tag Index &#8211; Mason's Blog About Javascript</title>
 <meta name="description" content="An archive of posts sorted by tag.">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://maseh87.github.io/images/">
-<meta name="twitter:title" content="Tag Archive">
+<meta name="twitter:image" content="http://maseh87.github.io/images/site-logo.png">
+<meta name="twitter:title" content="Tag Index">
 <meta name="twitter:description" content="An archive of posts sorted by tag.">
 <meta name="twitter:creator" content="@maseh87">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tag Archive">
+<meta property="og:title" content="Tag Index">
 <meta property="og:description" content="An archive of posts sorted by tag.">
 <meta property="og:url" content="http://maseh87.github.io/tags/">
-<meta property="og:site_name" content="Mase/blog.js">
+<meta property="og:site_name" content="Mason's Blog About Javascript">
 
 
 
 
 
 <link rel="canonical" href="http://maseh87.github.io/tags/">
-<link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Mase/blog.js Feed">
-<link rel="author" href="maseh87?rel=author">
+<link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Mason's Blog About Javascript Feed">
+
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -40,7 +40,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="http://maseh87.github.io/assets/css/main.min.css">
 <!-- Webfonts -->
-<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
 
 <meta http-equiv="cleartype" content="on">
 
@@ -61,476 +61,292 @@
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://maseh87.github.io/images/apple-touch-icon-144x144-precomposed.png">
 
-
-
-
-<style type="text/css">body {background-image:url(http://maseh87.github.io/images/witewall_3.png);}</style>
-
-
 </head>
 
-<body id="post-index" >
+<body id="page">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+	        
+			<li>
+				
+					<a href="/articles/">Articles</a>
+				 
+			</li>
+	        
+	        <li><a href="http://maseh87.github.io/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+	        <li class="dosearch"><i class="icon-search"></i> Search</li>
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
 
 <!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
-<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
-	<button class="dl-trigger">Open Menu</button>
-	<ul class="dl-menu">
-		<li><a href="http://maseh87.github.io">Home</a></li>
-		<li>
-			<a href="#">About</a>
-			<ul class="dl-submenu">
-				<li>
-					<img src="http://maseh87.github.io/images/me.jpg" alt="Mason Hargrove photo" class="author-photo">
-					<h4>Mason Hargrove</h4>
-					<p>Knowledge is Power</p>
-				</li>
-				<li><a href="http://maseh87.github.io/about/">Learn More</a></li>
-				<li>
-					<a href="mailto:maseh87@gmail.com"><i class="icon-envelope"></i> Email</a>
-				</li>
-				<li>
-					<a href="http://twitter.com/maseh87"><i class="icon-twitter"></i> Twitter</a>
-				</li>
-				
-				<li>
-					<a href="maseh87"><i class="icon-google-plus"></i> Google+</a>
-				</li>
-				<li>
-					<a href="http://linkedin.com/in/maseh87"><i class="icon-linkedin"></i> LinkedIn</a>
-				</li>
-				<li>
-					<a href="http://github.com/maseh87"><i class="icon-github"></i> GitHub</a>
-				</li>
-				
-				
-				
-				
-			</ul><!-- /.dl-submenu -->
-		</li>
-		<li>
-			<a href="#">Posts</a>
-			<ul class="dl-submenu">
-				<li><a href="http://maseh87.github.io/archive/">All Posts</a></li>
-				<li><a href="http://maseh87.github.io/tags/">All Tags</a></li>
-			</ul>
-		</li>
-		
-	</ul><!-- /.dl-menu -->
-</nav><!-- /.dl-menuwrapper -->
 
+<div class="search-wrapper">
+	<div class="search-form">
+		<input type="text" class="search-field" placeholder="Search...">
+		<i class="icon-remove-sign icon-2x"></i>
+		<ul class="search-results post-list"></ul><!-- /.search-results -->
+	</div><!-- /.search-form -->
+</div><!-- ./search-wrapper -->
 
-<div class="entry-header">
-  
-  <div class="header-title">
-    <div class="header-title-wrap">
-      <h1>Mase/blog.js</h1>
-      <h2>Tag Archive</h2>
-    </div><!-- /.header-title-wrap -->
-  </div><!-- /.header-title -->
-</div><!-- /.entry-header -->
+<header class="masthead">
+	<div class="wrap">
+        
+    		<a href="http://maseh87.github.io/" class="site-logo" rel="home" title="Mason's Blog About Javascript"><img src="http://maseh87.github.io/images/site-logo.png" width="200" height="200" alt="Mason's Blog About Javascript logo" class="animated fadeInUp"></a>
+        
+        <h1 class="site-title animated fadeIn"><a href="http://maseh87.github.io/">Mason's Blog About Javascript</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description"></h2>
+	</div>
+</header><!-- /.masthead -->
+
 
 <div id="main" role="main">
-  <ul class="entry-meta inline-list">
-  
-  
-     
-    	<li><a href="#javascript" class="tag">javascript <span>4</span></a></li>
-     
-    	<li><a href="#firstblog" class="tag">firstblog <span>1</span></a></li>
-     
-    	<li><a href="#arguments" class="tag">arguments <span>1</span></a></li>
-     
-    	<li><a href="#array" class="tag">array <span>2</span></a></li>
-     
-    	<li><a href="#prototype" class="tag">prototype <span>1</span></a></li>
-     
-    	<li><a href="#psuedocode" class="tag">psuedocode <span>1</span></a></li>
-     
-    	<li><a href="#tips" class="tag">tips <span>2</span></a></li>
-     
-    	<li><a href="#programming" class="tag">programming <span>2</span></a></li>
-     
-    	<li><a href="#challenge" class="tag">challenge <span>1</span></a></li>
-     
-    	<li><a href="#30" class="tag">30 <span>1</span></a></li>
-     
-    	<li><a href="#month" class="tag">month <span>1</span></a></li>
-     
-    	<li><a href="#habit" class="tag">habit <span>1</span></a></li>
-     
-    	<li><a href="#habits" class="tag">habits <span>1</span></a></li>
-     
-    	<li><a href="#code" class="tag">code <span>1</span></a></li>
-     
-    	<li><a href="#sorting" class="tag">sorting <span>2</span></a></li>
-     
-    	<li><a href="#bubble sort" class="tag">bubble sort <span>1</span></a></li>
-     
-    	<li><a href="#algorithms" class="tag">algorithms <span>1</span></a></li>
-     
-    	<li><a href="#arrays" class="tag">arrays <span>1</span></a></li>
-     
-    	<li><a href="#objects" class="tag">objects <span>1</span></a></li>
+  <article class="entry">
     
-  
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <h1 class="entry-title">Tag Index</h1>
+      </header>
+      <div class="entry-content">
+        
 
+
+<ul class="tag-box inline">
+  
+    
+    <li><a href="#algorithms">algorithms <span>1</span></a></li>
+  
+    
+    <li><a href="#angular">angular <span>2</span></a></li>
+  
+    
+    <li><a href="#arguments">arguments <span>1</span></a></li>
+  
+    
+    <li><a href="#array">array <span>2</span></a></li>
+  
+    
+    <li><a href="#auth">auth <span>1</span></a></li>
+  
+    
+    <li><a href="#bubble sort">bubble sort <span>1</span></a></li>
+  
+    
+    <li><a href="#express">express <span>1</span></a></li>
+  
+    
+    <li><a href="#firstblog">firstblog <span>1</span></a></li>
+  
+    
+    <li><a href="#getting started">getting started <span>1</span></a></li>
+  
+    
+    <li><a href="#ionic">ionic <span>1</span></a></li>
+  
+    
+    <li><a href="#javascript">javascript <span>5</span></a></li>
+  
+    
+    <li><a href="#nQueens">nQueens <span>1</span></a></li>
+  
+    
+    <li><a href="#node">node <span>1</span></a></li>
+  
+    
+    <li><a href="#prototype">prototype <span>1</span></a></li>
+  
+    
+    <li><a href="#recursion">recursion <span>1</span></a></li>
+  
+    
+    <li><a href="#scaffold">scaffold <span>1</span></a></li>
+  
+    
+    <li><a href="#server">server <span>1</span></a></li>
+  
+    
+    <li><a href="#sorting">sorting <span>1</span></a></li>
+  
 </ul>
 
- 
-	<article class="hentry">
-	<h2 id="javascript">javascript</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/Javascript-Objects-in-V8/" title="Automatically Sorted Objects in Javascript">Automatically Sorted Objects in Javascript</a></li>
-			
-			
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/for-loops/" title="Helpful Javascript Programming Tips pt 1">Helpful Javascript Programming Tips pt 1</a></li>
-			
-			
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/30-day-challenge/" title="My 30 day Challenge">My 30 day Challenge</a></li>
-			
-			
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/arguments-object/" title="The Arguments Object">The Arguments Object</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="firstblog">firstblog</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/arguments-object/" title="The Arguments Object">The Arguments Object</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="arguments">arguments</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/arguments-object/" title="The Arguments Object">The Arguments Object</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="array">array</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/bubble-sort/" title="Bubble Sort">Bubble Sort</a></li>
-			
-			
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/array-prototype/" title="The Array's prototype (part 1)">The Array's prototype (part 1)</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="prototype">prototype</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/array-prototype/" title="The Array's prototype (part 1)">The Array's prototype (part 1)</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="psuedocode">psuedocode</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/pseudocode-tips/" title="Tips on using Pseudocode">Tips on using Pseudocode</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="tips">tips</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/for-loops/" title="Helpful Javascript Programming Tips pt 1">Helpful Javascript Programming Tips pt 1</a></li>
-			
-			
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/pseudocode-tips/" title="Tips on using Pseudocode">Tips on using Pseudocode</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="programming">programming</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/for-loops/" title="Helpful Javascript Programming Tips pt 1">Helpful Javascript Programming Tips pt 1</a></li>
-			
-			
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/pseudocode-tips/" title="Tips on using Pseudocode">Tips on using Pseudocode</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="challenge">challenge</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/30-day-challenge/" title="My 30 day Challenge">My 30 day Challenge</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="30">30</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/30-day-challenge/" title="My 30 day Challenge">My 30 day Challenge</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="month">month</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/30-day-challenge/" title="My 30 day Challenge">My 30 day Challenge</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="habit">habit</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/30-day-challenge/" title="My 30 day Challenge">My 30 day Challenge</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="habits">habits</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/30-day-challenge/" title="My 30 day Challenge">My 30 day Challenge</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="code">code</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/30-day-challenge/" title="My 30 day Challenge">My 30 day Challenge</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="sorting">sorting</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/Javascript-Objects-in-V8/" title="Automatically Sorted Objects in Javascript">Automatically Sorted Objects in Javascript</a></li>
-			
-			
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/bubble-sort/" title="Bubble Sort">Bubble Sort</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="bubble sort">bubble sort</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/bubble-sort/" title="Bubble Sort">Bubble Sort</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="algorithms">algorithms</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/bubble-sort/" title="Bubble Sort">Bubble Sort</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="arrays">arrays</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/for-loops/" title="Helpful Javascript Programming Tips pt 1">Helpful Javascript Programming Tips pt 1</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
- 
-	<article class="hentry">
-	<h2 id="objects">objects</h2>
-		<ul>
-		  
-		
-			
-			
-				<li class="entry-title"><a href="http://maseh87.github.io/Javascript-Objects-in-V8/" title="Automatically Sorted Objects in Javascript">Automatically Sorted Objects in Javascript</a></li>
-			
-			
-		
-		
-		
-		</ul>
-	</article><!-- /.hentry -->
 
+  
+  <h2 id="algorithms">algorithms</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/bubble-sort/">Bubble Sort<span class="entry-date"><time datetime="2014-04-16T00:00:00-04:00">April 16, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="angular">angular</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/file-structure/">Modular file structure for your Angular project<span class="entry-date"><time datetime="2014-06-28T00:00:00-04:00">June 28, 2014</time></span></a></li>
+  
+    <li><a href="http://maseh87.github.io/angular-tips/">Getting Started with Angular<span class="entry-date"><time datetime="2014-06-19T00:00:00-04:00">June 19, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="arguments">arguments</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/arguments-object/">The Arguments Object<span class="entry-date"><time datetime="2014-03-10T00:00:00-04:00">March 10, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="array">array</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/bubble-sort/">Bubble Sort<span class="entry-date"><time datetime="2014-04-16T00:00:00-04:00">April 16, 2014</time></span></a></li>
+  
+    <li><a href="http://maseh87.github.io/array-prototype/">The Array's prototype<span class="entry-date"><time datetime="2014-03-26T00:00:00-04:00">March 26, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="auth">auth</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/auth-with-express/">Authentication With Expressjs<span class="entry-date"><time datetime="2014-06-15T00:00:00-04:00">June 15, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="bubble sort">bubble sort</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/bubble-sort/">Bubble Sort<span class="entry-date"><time datetime="2014-04-16T00:00:00-04:00">April 16, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="express">express</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/auth-with-express/">Authentication With Expressjs<span class="entry-date"><time datetime="2014-06-15T00:00:00-04:00">June 15, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="firstblog">firstblog</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/arguments-object/">The Arguments Object<span class="entry-date"><time datetime="2014-03-10T00:00:00-04:00">March 10, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="getting started">getting started</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/angular-tips/">Getting Started with Angular<span class="entry-date"><time datetime="2014-06-19T00:00:00-04:00">June 19, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="ionic">ionic</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/file-structure/">Modular file structure for your Angular project<span class="entry-date"><time datetime="2014-06-28T00:00:00-04:00">June 28, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="javascript">javascript</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/node-server/">Create a node server using Express<span class="entry-date"><time datetime="2014-06-28T00:00:00-04:00">June 28, 2014</time></span></a></li>
+  
+    <li><a href="http://maseh87.github.io/angular-tips/">Getting Started with Angular<span class="entry-date"><time datetime="2014-06-19T00:00:00-04:00">June 19, 2014</time></span></a></li>
+  
+    <li><a href="http://maseh87.github.io/auth-with-express/">Authentication With Expressjs<span class="entry-date"><time datetime="2014-06-15T00:00:00-04:00">June 15, 2014</time></span></a></li>
+  
+    <li><a href="http://maseh87.github.io/nQueens/">nQueens Problem<span class="entry-date"><time datetime="2014-06-13T00:00:00-04:00">June 13, 2014</time></span></a></li>
+  
+    <li><a href="http://maseh87.github.io/arguments-object/">The Arguments Object<span class="entry-date"><time datetime="2014-03-10T00:00:00-04:00">March 10, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="nQueens">nQueens</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/nQueens/">nQueens Problem<span class="entry-date"><time datetime="2014-06-13T00:00:00-04:00">June 13, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="node">node</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/node-server/">Create a node server using Express<span class="entry-date"><time datetime="2014-06-28T00:00:00-04:00">June 28, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="prototype">prototype</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/array-prototype/">The Array's prototype<span class="entry-date"><time datetime="2014-03-26T00:00:00-04:00">March 26, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="recursion">recursion</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/nQueens/">nQueens Problem<span class="entry-date"><time datetime="2014-06-13T00:00:00-04:00">June 13, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="scaffold">scaffold</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/file-structure/">Modular file structure for your Angular project<span class="entry-date"><time datetime="2014-06-28T00:00:00-04:00">June 28, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="server">server</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/node-server/">Create a node server using Express<span class="entry-date"><time datetime="2014-06-28T00:00:00-04:00">June 28, 2014</time></span></a></li>
+  
+  </ul>
+
+  
+  <h2 id="sorting">sorting</h2>
+  <ul class="post-list">
+  
+    <li><a href="http://maseh87.github.io/bubble-sort/">Bubble Sort<span class="entry-date"><time datetime="2014-04-16T00:00:00-04:00">April 16, 2014</time></span></a></li>
+  
+  </ul>
+
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+  </article>
 </div><!-- /#main -->
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
-    <span>&copy; 2014 Mason Hargrove.</span>
-
-
-
+    <span>&copy; 2014 Mason Hargrove. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="http://twitter.com/maseh87" title="Mason Hargrove on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
+	
+	
+	<a href="http://linkedin.com/in/maseh87" title="Mason Hargrove on LinkedIn" target="_blank"><i class="icon-linkedin icon-2x"></i></a>
+	
+	<a href="http://instagram.com/maseh87" title="Mason Hargrove on Instagram" target="_blank"><i class="icon-instagram icon-2x"></i></a>
+	
+	<a href="http://github.com/maseh87" title="Mason Hargrove on Github" target="_blank"><i class="icon-github icon-2x"></i></a>
+	
+</div><!-- /.social-icons -->
   </footer>
 </div><!-- /.footer-wrapper -->
 
@@ -538,23 +354,43 @@
 <script>window.jQuery || document.write('<script src="http://maseh87.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="http://maseh87.github.io/assets/js/scripts.min.js"></script>
 
-<!-- Asynchronous Google Analytics snippet -->
+<!-- Jekyll Simple Search option -->
 <script>
-  var _gaq = _gaq || [];
-  var pluginUrl = 
- '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-  _gaq.push(['_setAccount', 'UA-44212105-2']);
-  _gaq.push(['_trackPageview']);
+  $(document).ready(function() {
+      $('.search-field').simpleJekyllSearch({
+          jsonFile : 'http://maseh87.github.io/search.json',
+          searchResults : '.search-results',
+          template : '<li><article><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></article></li>',
+          noResults: '<p>Nothing found.</p>'
+        });
+  });
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  (function( $, window, undefined ) {
+    
+     var bs = {
+          close: $(".icon-remove-sign"),
+          searchform: $(".search-form"),
+          canvas: $("body"),
+          dothis: $('.dosearch')
+      };
+    
+    bs.dothis.on('click', function() {
+      $('.search-wrapper').css({ display: "block" });
+      bs.searchform.toggleClass('active');
+      bs.searchform.find('input').focus();
+      bs.canvas.toggleClass('search-overlay');
+    });
+    
+      bs.close.on('click', function() {
+        $('.search-wrapper').removeAttr( 'style' );
+        bs.searchform.toggleClass('active');
+        bs.canvas.removeClass('search-overlay');
+    });
+  })( jQuery, window );
 </script>
 
 
+          
 
 </body>
 </html>

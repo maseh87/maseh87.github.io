@@ -5,31 +5,31 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>The Arguments Object &#8211; Mason's Blog About Javascript</title>
-<meta name="description" content="The weird array like thing called arguments">
-<meta name="keywords" content="javascript, firstblog, arguments">
+<title>Create a node server using Express &#8211; Mason's Blog About Javascript</title>
+<meta name="description" content="How to create a server the easy way">
+<meta name="keywords" content="server, javascript, node">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://maseh87.github.io/images/so-simple-sample-image-1.jpg">
+<meta name="twitter:image" content="http://maseh87.github.io/images/so-simple-sample-image-2.jpg">
 
-<meta name="twitter:title" content="The Arguments Object">
-<meta name="twitter:description" content="The weird array like thing called arguments">
+<meta name="twitter:title" content="Create a node server using Express">
+<meta name="twitter:description" content="How to create a server the easy way">
 <meta name="twitter:creator" content="@maseh87">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Arguments Object">
-<meta property="og:description" content="The weird array like thing called arguments">
-<meta property="og:url" content="http://maseh87.github.io/arguments-object/">
+<meta property="og:title" content="Create a node server using Express">
+<meta property="og:description" content="How to create a server the easy way">
+<meta property="og:url" content="http://maseh87.github.io/node-server/">
 <meta property="og:site_name" content="Mason's Blog About Javascript">
 
 
 
 
 
-<link rel="canonical" href="http://maseh87.github.io/arguments-object/">
+<link rel="canonical" href="http://maseh87.github.io/node-server/">
 <link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Mason's Blog About Javascript Feed">
 
 
@@ -104,83 +104,80 @@
 
 <div id="main" role="main">
   <article class="hentry">
-    <img src="http://maseh87.github.io/images/so-simple-sample-image-1.jpg" class="entry-feature-image" alt="The Arguments Object" >
+    <img src="http://maseh87.github.io/images/so-simple-sample-image-2.jpg" class="entry-feature-image" alt="Create a node server using Express" >
     <div class="entry-wrapper">
       <header class="entry-header">
-        <span class="entry-tags"><a href="http://maseh87.github.io/tags/#javascript" title="Pages tagged javascript">javascript</a>&nbsp;&bull;&nbsp;<a href="http://maseh87.github.io/tags/#firstblog" title="Pages tagged firstblog">firstblog</a>&nbsp;&bull;&nbsp;<a href="http://maseh87.github.io/tags/#arguments" title="Pages tagged arguments">arguments</a></span>
+        <span class="entry-tags"><a href="http://maseh87.github.io/tags/#server" title="Pages tagged server">server</a>&nbsp;&bull;&nbsp;<a href="http://maseh87.github.io/tags/#javascript" title="Pages tagged javascript">javascript</a>&nbsp;&bull;&nbsp;<a href="http://maseh87.github.io/tags/#node" title="Pages tagged node">node</a></span>
         
-          <h1 class="entry-title">The Arguments Object</h1>
+          <h1 class="entry-title">Create a node server using Express</h1>
         
       </header>
       <footer class="entry-meta">
         <img src="http://maseh87.github.io/images/me.jpg" alt="Mason Hargrove photo" class="author-photo">
         <span class="author vcard">By <span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-03-10T00:00:00-04:00"><i class="icon-calendar-empty"></i> March 10, 2014</time></span>
-        <span class="entry-date date modified"><time datetime="2014-03-31"><i class="icon-pencil"></i> March 31, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-06-28T00:00:00-04:00"><i class="icon-calendar-empty"></i> June 28, 2014</time></span>
+        <span class="entry-date date modified"><time datetime="2014-03-26"><i class="icon-pencil"></i> March 26, 2014</time></span>
         <span class="entry-comments"><i class="icon-comment-alt"></i> <a href="#disqus_thread">Comment</a></span>
-        <span><a href="http://maseh87.github.io/arguments-object/" rel="bookmark" title="The Arguments Object"><i class="icon-link"></i> Permalink</a></span>
+        <span><a href="http://maseh87.github.io/node-server/" rel="bookmark" title="Create a node server using Express"><i class="icon-link"></i> Permalink</a></span>
         
         <span class="social-share-facebook">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://maseh87.github.io/arguments-object/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://maseh87.github.io/node-server/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
         <span class="social-share-twitter">
-            <a href="https://twitter.com/intent/tweet?hashtags=&text=The Arguments Object&url=http://maseh87.github.io/arguments-object/&via=maseh87" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+            <a href="https://twitter.com/intent/tweet?hashtags=&text=Create a node server using Express&url=http://maseh87.github.io/node-server/&via=maseh87" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
         <span class="social-share-googleplus">
-            <a href="https://plus.google.com/share?url=http://maseh87.github.io/arguments-object/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <a href="https://plus.google.com/share?url=http://maseh87.github.io/node-server/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
             <!-- /.social-share -->
       </footer>
       <div class="entry-content">
-        <p>If you are still a young buck in the Javascript game, like myself, then maybe I can share a newfound
-trick I learned while creating functions.</p>
+        <p>Creating a server using Node can be pretty confusing and time consuming depending on the size of your application. Luckily there is a simple and easy way to make your server using Express.</p>
 
-<p>For practice I was recreating a few of the most commonly used array methods like .pop, .push, .shift and .unshift to get a really good understanding on how methods work in Javascript. For example, the .push method allows you to pass in a value and it will add that value to the end of the array you specified. Like so…</p>
+<p>One main feature you will most likely want out of your server is providing your static assets to the browser so they can be rendered for viewing. When trying to accomplish this with only node it is, in my opinion, annoying. This is the way to do it in Express.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//create a new array</span>
-<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="lineno">3</span> 
-<span class="lineno">4</span> <span class="c1">//use the push method to add a new value to the END of the array</span>
-<span class="lineno">5</span> <span class="nx">array</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<span class="lineno">6</span> 
-<span class="lineno">7</span> <span class="c1">//array will now be this</span>
-<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">];</span>
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span>  
+<span class="lineno"> 2</span> <span class="c1">//first require our express files</span>
+<span class="lineno"> 3</span> <span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+<span class="lineno"> 4</span> <span class="c1">//next invoke our express function so we can have access to the express&#39; object properties</span>
+<span class="lineno"> 5</span> <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span> <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">&#39;path/to/your/static/asset&#39;</span><span class="p">));</span>
+<span class="lineno"> 8</span> <span class="c1">//specifies what port your asset will be on</span>
+<span class="lineno"> 9</span> <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+<span class="lineno">10</span> <span class="c1">//just a message telling yourself that the server is running correctly</span>
+<span class="lineno">11</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Listening on port 3k&#39;</span><span class="p">);</span>
+<span class="lineno">12</span>  
 </code></pre></div>
 
-<p>The .push method can take as many values as you give it and they will be ‘pushed’ in order to the end of the array you specify. That is when I discovered the arguments object. If you are making a function to take an unspecified amount of arguments like the .push method you can use the arguments object within your function to get the number of arguments that are being passed in.</p>
+<p>Inside the express.static you will give the path to your static asset. Your static assets will be any files that you want to be rendered in the browser for viewing, for example your index.html page. If you include __dirname + /a/path it can save you a few lines of code. This will also correctly serve any script tags or links that your static asset has included.</p>
 
-<p>Every function has access to the arguments object by default and when it is returned it looks like an array with the arguments listed as the elements of that array. Although it appears to look like an array it is does not act exactly like an array. It’s a little confusing but it can be useful if you need to determine the number of arguments that are passed into your function.</p>
+<p>Express also has great middleware options. One very useful middleware package is morgan. Morgan is a logger middleware that will display in your terminal all requests made to your server. Morgan takes one argument that can be 4 different options. The most useful is the ‘dev’ argument. When provided that morgan will log ever output that will colored by the different response status’. Extremely useful when you run into bugs.</p>
 
-<p>Let’s see it in action to get a better understanding…</p>
+<p>How to include morgan</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//declare a function and console.log the arguments object inside</span>
-<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="lineno">3</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
-<span class="lineno">4</span> <span class="p">};</span>
-<span class="lineno">5</span> <span class="c1">//call the function test and pass it a few arguments</span>
-<span class="lineno">6</span> <span class="nx">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">);</span>
-<span class="lineno">7</span> <span class="c1">//the end result</span>
-<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">]</span>
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span>  
+<span class="lineno"> 2</span> <span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+<span class="lineno"> 3</span> <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+<span class="lineno"> 4</span> <span class="kd">var</span> <span class="nx">morgan</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;morgan&#39;</span><span class="p">);</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span> <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">morgan</span><span class="p">(</span><span class="s1">&#39;dev&#39;</span><span class="p">));</span>
+<span class="lineno"> 7</span> <span class="c1">//yes its that simple</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span> <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">&#39;path/to/your/static/asset&#39;</span><span class="p">));</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span> <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+<span class="lineno">12</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Listening on port 3k&#39;</span><span class="p">);</span>
+<span class="lineno">13</span>  
 </code></pre></div>
 
-<p>The arguments object definitely looks like an array but you cannot treat it exactly like an array. The only method you can use on the arguments object is length, which can be useful if you need to loop through each argument individually or just find out how many arguments are being passed in.</p>
+<p>Express will save you a ton of time when creating your servers and I highly recommend using it. Tell me your techniques when creating your own servers below.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="c1">//declare a function and console.log the length of the arguments object</span>
-<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">test</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="lineno">3</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-<span class="lineno">4</span> <span class="p">};</span>
-<span class="lineno">5</span> <span class="c1">//call the function test and pass it a few arguments</span>
-<span class="lineno">6</span> <span class="nx">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hey&#39;</span><span class="p">,</span> <span class="mi">74</span><span class="p">);</span>
-<span class="lineno">7</span> <span class="c1">//the end result</span>
-<span class="lineno">8</span> <span class="o">--&gt;</span> <span class="mi">3</span>
-</code></pre></div>
-
-<p>There are a ton of different uses for the arguments object and by knowing it exists could save you some time and stress while programming. You can read more about it on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">MDN</a> or <a href="http://devdocs.io/javascript/functions_and_function_scope/arguments">DevDocs</a>. Feel free to reach out with any questions or inputs!</p>
 
         <div id="disqus_thread"></div><!-- /#disqus_thread -->
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
+        <a href="http://maseh87.github.io/file-structure/" class="btn" title="Modular file structure for your Angular project">Previous article</a>
       
-        <a href="http://maseh87.github.io/array-prototype/" class="btn" title="The Array's prototype">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>

@@ -36,5 +36,5 @@ The tabs.html file holds the tabs for the footer of our application. Each tab ha
 To give you a better understanding this is a visual example of how our Ionic app is laid out. Inside of your app.js file you will see all of the currents states and how they are structured.
 
 <figure>
-  <img src="images/filestructure.jpg">
+  <img src="/images/filestructure.jpg">
 </figure>

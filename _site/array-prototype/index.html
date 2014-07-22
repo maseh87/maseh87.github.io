@@ -5,33 +5,33 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>The Array's prototype (part 1) &#8211; Mase/blog.js</title>
+<title>The Array's prototype &#8211; Mason's Blog About Javascript</title>
 <meta name="description" content="Get a better understanding of Array.prototype">
 <meta name="keywords" content="array, prototype">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://maseh87.github.io/images/abstract-6.jpg">
+<meta name="twitter:image" content="http://maseh87.github.io/images/so-simple-sample-image-2.jpg">
 
-<meta name="twitter:title" content="The Array's prototype (part 1)">
+<meta name="twitter:title" content="The Array's prototype">
 <meta name="twitter:description" content="Get a better understanding of Array.prototype">
 <meta name="twitter:creator" content="@maseh87">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Array's prototype (part 1)">
+<meta property="og:title" content="The Array's prototype">
 <meta property="og:description" content="Get a better understanding of Array.prototype">
 <meta property="og:url" content="http://maseh87.github.io/array-prototype/">
-<meta property="og:site_name" content="Mase/blog.js">
+<meta property="og:site_name" content="Mason's Blog About Javascript">
 
 
 
 
 
 <link rel="canonical" href="http://maseh87.github.io/array-prototype/">
-<link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Mase/blog.js Feed">
-<link rel="author" href="maseh87?rel=author">
+<link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Mason's Blog About Javascript Feed">
+
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -41,7 +41,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="http://maseh87.github.io/assets/css/main.min.css">
 <!-- Webfonts -->
-<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
 
 <meta http-equiv="cleartype" content="on">
 
@@ -62,84 +62,74 @@
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://maseh87.github.io/images/apple-touch-icon-144x144-precomposed.png">
 
-
-
-
-<style type="text/css">body {background-image:url(http://maseh87.github.io/images/witewall_3.png);}</style>
-
-
 </head>
 
-<body id="post" class="feature">
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+	        
+			<li>
+				
+					<a href="/articles/">Articles</a>
+				 
+			</li>
+	        
+	        <li><a href="http://maseh87.github.io/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+	        <li class="dosearch"><i class="icon-search"></i> Search</li>
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
 
 <!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
-<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
-	<button class="dl-trigger">Open Menu</button>
-	<ul class="dl-menu">
-		<li><a href="http://maseh87.github.io">Home</a></li>
-		<li>
-			<a href="#">About</a>
-			<ul class="dl-submenu">
-				<li>
-					<img src="http://maseh87.github.io/images/me.jpg" alt="Mason Hargrove photo" class="author-photo">
-					<h4>Mason Hargrove</h4>
-					<p>Knowledge is Power</p>
-				</li>
-				<li><a href="http://maseh87.github.io/about/">Learn More</a></li>
-				<li>
-					<a href="mailto:maseh87@gmail.com"><i class="icon-envelope"></i> Email</a>
-				</li>
-				<li>
-					<a href="http://twitter.com/maseh87"><i class="icon-twitter"></i> Twitter</a>
-				</li>
-				
-				<li>
-					<a href="maseh87"><i class="icon-google-plus"></i> Google+</a>
-				</li>
-				<li>
-					<a href="http://linkedin.com/in/maseh87"><i class="icon-linkedin"></i> LinkedIn</a>
-				</li>
-				<li>
-					<a href="http://github.com/maseh87"><i class="icon-github"></i> GitHub</a>
-				</li>
-				
-				
-				
-				
-			</ul><!-- /.dl-submenu -->
-		</li>
-		<li>
-			<a href="#">Posts</a>
-			<ul class="dl-submenu">
-				<li><a href="http://maseh87.github.io/archive/">All Posts</a></li>
-				<li><a href="http://maseh87.github.io/tags/">All Tags</a></li>
-			</ul>
-		</li>
-		
-	</ul><!-- /.dl-menu -->
-</nav><!-- /.dl-menuwrapper -->
 
+<div class="search-wrapper">
+	<div class="search-form">
+		<input type="text" class="search-field" placeholder="Search...">
+		<i class="icon-remove-sign icon-2x"></i>
+		<ul class="search-results post-list"></ul><!-- /.search-results -->
+	</div><!-- /.search-form -->
+</div><!-- ./search-wrapper -->
 
+<header class="masthead">
+	
+		<div class="wrap">
+			<a href="http://maseh87.github.io/" class="site-logo" rel="home" title="Mason's Blog About Javascript"><img src="http://maseh87.github.io/images/site-logo.png" width="200" height="200" alt="Mason's Blog About Javascript logo" class="animated bounceInDown"></a>
+		</div>
+	
+</header><!-- /.masthead -->
 
-<div class="entry-header">
-  <div class="entry-image"><img src="http://maseh87.github.io/images/abstract-6.jpg" alt="The Array's prototype (part 1)">
-
-  </div><!-- /.entry-image -->
-</div><!-- /.entry-header -->
 
 
 <div id="main" role="main">
   <article class="hentry">
-    <header class="header-title">
-      <div class="header-title-wrap">
+    <img src="http://maseh87.github.io/images/so-simple-sample-image-2.jpg" class="entry-feature-image" alt="The Array's prototype" >
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <span class="entry-tags"><a href="http://maseh87.github.io/tags/#array" title="Pages tagged array">array</a>&nbsp;&bull;&nbsp;<a href="http://maseh87.github.io/tags/#prototype" title="Pages tagged prototype">prototype</a></span>
         
-          <h1 class="entry-title"><a href="http://maseh87.github.io/array-prototype/" rel="bookmark" title="The Array's prototype (part 1)">The Array's prototype (part 1)</a></h1>
+          <h1 class="entry-title">The Array's prototype</h1>
         
-        <h2>March 26, 2014</h2>
-      </div><!-- /.header-title-wrap -->
-    </header>
-    <div class="entry-content">
-      <p>I have been a little confused on what .prototype means and what is it for. When I first looking in to exactly what it is a good friend of mine explained that I should think about the word prototype as a bag of methods. At the time I didn’t understand it fully but I have gotten a pretty good grasp on what it is and what it does.</p>
+      </header>
+      <footer class="entry-meta">
+        <img src="http://maseh87.github.io/images/me.jpg" alt="Mason Hargrove photo" class="author-photo">
+        <span class="author vcard">By <span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>
+        <span class="entry-date date published"><time datetime="2014-03-26T00:00:00-04:00"><i class="icon-calendar-empty"></i> March 26, 2014</time></span>
+        <span class="entry-date date modified"><time datetime="2014-05-26"><i class="icon-pencil"></i> May 26, 2014</time></span>
+        <span class="entry-comments"><i class="icon-comment-alt"></i> <a href="#disqus_thread">Comment</a></span>
+        <span><a href="http://maseh87.github.io/array-prototype/" rel="bookmark" title="The Array's prototype"><i class="icon-link"></i> Permalink</a></span>
+        
+        <span class="social-share-facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://maseh87.github.io/array-prototype/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
+        <span class="social-share-twitter">
+            <a href="https://twitter.com/intent/tweet?hashtags=&text=The Array's prototype&url=http://maseh87.github.io/array-prototype/&via=maseh87" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+        <span class="social-share-googleplus">
+            <a href="https://plus.google.com/share?url=http://maseh87.github.io/array-prototype/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <!-- /.social-share -->
+      </footer>
+      <div class="entry-content">
+        <p>I have been a little confused on what .prototype means and what is it for. When I first looking in to exactly what it is a good friend of mine explained that I should think about the word prototype as a bag of methods. At the time I didn’t understand it fully but I have gotten a pretty good grasp on what it is and what it does.</p>
 
 <p>Actually, to think of prototype as a bag of methods is a very good way of describing it. There are a few methods that you can use on all arrays within Javascript such as, .pop, .push, .shift, .unshift etc… Those methods were built on the Array class’ prototype already by JS.</p>
 
@@ -168,56 +158,34 @@
 
 <p>Now we have created a new prototype on the Array class and named it add, but there are a few other stipulations that the native .push has that our method does not. In our current function we are only allowed to insert one value in. The native .push method allows you to add as many as you choose. In part 2 we will go over how to optimize our function to perform exactly like the push method…</p>
 
-      <footer class="entry-meta">
-        <span class="entry-tags"><a href="http://maseh87.github.io/tags/#array" title="Pages tagged array" class="tag">array</a><a href="http://maseh87.github.io/tags/#prototype" title="Pages tagged prototype" class="tag">prototype</a></span>
-        <span><a href="http://maseh87.github.io/array-prototype/" rel="bookmark" title="The Array's prototype (part 1)">The Array's prototype (part 1)</a> was published on <span class="entry-date date published updated"><time datetime="2014-03-26T00:00:00-07:00">March 26, 2014</time></span></span>
-        (revised: <span class="entry-date date modified"><time datetime="2014-03-26">03/26/2014</time></span>)
-        <span class="author vcard"><span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>
-        <div class="social-share">
-          <ul class="socialcount socialcount-small inline-list">
-            <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://maseh87.github.io/array-prototype/" title="Share on Facebook"><span class="count"><i class="icon-facebook-sign"></i> Like</span></a></li>
-            <li class="twitter"><a href="https://twitter.com/intent/tweet?text=http://maseh87.github.io/array-prototype/" title="Share on Twitter"><span class="count"><i class="icon-twitter-sign"></i> Tweet</span></a></li>
-            <li class="googleplus"><a href="https://plus.google.com/share?url=http://maseh87.github.io/array-prototype/" title="Share on Google Plus"><span class="count"><i class="icon-google-plus-sign"></i> +1</span></a></li>
-          </ul>
-        </div><!-- /.social-share -->
-      </footer>
-    </div><!-- /.entry-content -->
-    <section id="disqus_thread"></section><!-- /#disqus_thread -->
-    
-    <div class="read-more">
+        <div id="disqus_thread"></div><!-- /#disqus_thread -->
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
       
-        <div class="read-more-header">
-          <a href="http://maseh87.github.io/arguments-object/" class="read-more-btn">Read More</a>
-        </div><!-- /.read-more-header -->
-        <div class="read-more-content">
-          <h3><a href="http://maseh87.github.io/Javascript-Objects-in-V8/" title="Automatically Sorted Objects in Javascript">Automatically Sorted Objects in Javascript</a></h3>
-          <p>Something Chrome does automatically <a href="http://maseh87.github.io/Javascript-Objects-in-V8/">Continue reading</a></p>
-        </div><!-- /.read-more-content -->
+        <a href="http://maseh87.github.io/arguments-object/" class="btn" title="The Arguments Object">Previous article</a>
       
-      <div class="read-more-list">
-        
-          <div class="list-item">
-            <h4><a href="http://maseh87.github.io/for-loops/" title="Helpful Javascript Programming Tips pt 1">Helpful Javascript Programming Tips pt 1</a></h4>
-            <span>Published on April 16, 2014</span>
-          </div><!-- /.list-item -->
-        
-          <div class="list-item">
-            <h4><a href="http://maseh87.github.io/bubble-sort/" title="Bubble Sort">Bubble Sort</a></h4>
-            <span>Published on April 16, 2014</span>
-          </div><!-- /.list-item -->
-        
-      </div><!-- /.read-more-list -->
       
-    </div><!-- /.read-more -->
+        <a href="http://maseh87.github.io/bubble-sort/" class="btn" title="Bubble Sort">Next article</a>
+      
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
-    <span>&copy; 2014 Mason Hargrove.</span>
-
-
-
+    <span>&copy; 2014 Mason Hargrove. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/so-simple/">So Simple Theme</a>.</span>
+<div class="social-icons">
+	<a href="http://twitter.com/maseh87" title="Mason Hargrove on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
+	
+	
+	<a href="http://linkedin.com/in/maseh87" title="Mason Hargrove on LinkedIn" target="_blank"><i class="icon-linkedin icon-2x"></i></a>
+	
+	<a href="http://instagram.com/maseh87" title="Mason Hargrove on Instagram" target="_blank"><i class="icon-instagram icon-2x"></i></a>
+	
+	<a href="http://github.com/maseh87" title="Mason Hargrove on Github" target="_blank"><i class="icon-github icon-2x"></i></a>
+	
+</div><!-- /.social-icons -->
   </footer>
 </div><!-- /.footer-wrapper -->
 
@@ -225,21 +193,41 @@
 <script>window.jQuery || document.write('<script src="http://maseh87.github.io/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="http://maseh87.github.io/assets/js/scripts.min.js"></script>
 
-<!-- Asynchronous Google Analytics snippet -->
+<!-- Jekyll Simple Search option -->
 <script>
-  var _gaq = _gaq || [];
-  var pluginUrl = 
- '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-  _gaq.push(['_setAccount', 'UA-44212105-2']);
-  _gaq.push(['_trackPageview']);
+  $(document).ready(function() {
+      $('.search-field').simpleJekyllSearch({
+          jsonFile : 'http://maseh87.github.io/search.json',
+          searchResults : '.search-results',
+          template : '<li><article><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></article></li>',
+          noResults: '<p>Nothing found.</p>'
+        });
+  });
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  (function( $, window, undefined ) {
+    
+     var bs = {
+          close: $(".icon-remove-sign"),
+          searchform: $(".search-form"),
+          canvas: $("body"),
+          dothis: $('.dosearch')
+      };
+    
+    bs.dothis.on('click', function() {
+      $('.search-wrapper').css({ display: "block" });
+      bs.searchform.toggleClass('active');
+      bs.searchform.find('input').focus();
+      bs.canvas.toggleClass('search-overlay');
+    });
+    
+      bs.close.on('click', function() {
+        $('.search-wrapper').removeAttr( 'style' );
+        bs.searchform.toggleClass('active');
+        bs.canvas.removeClass('search-overlay');
+    });
+  })( jQuery, window );
 </script>
+
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -261,7 +249,7 @@
     }());
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>	        
 
 </body>
 </html>
