@@ -43,7 +43,7 @@ To give you a better understanding here is a visual example of how our Ionic app
 
 So lets set up our files to better respresent how our app is already structured.
 
-{% highlight javascript linenos %} {% raw %}
+{% highlight javascript %} {% raw %}
 www
   -> css
   -> img
