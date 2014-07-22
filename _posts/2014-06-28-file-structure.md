@@ -14,7 +14,7 @@ Alright boys and girls, I am going to give you an example on how I structure my 
 
 After you have you have scaffolded out your new Ionic tabs app, inside of your www folder is where we will doing all of the work. Ionic provides you with a good base structure to get started but it can get cluttered very quickly as your app grows. The current folder layout is structured like this.
 
-{% highlight javascript linenos%}{% raw %}
+{% highlight javascript linenos %} {% raw %}
 // The client side folder which hold all client side code
 www
   -> css
@@ -29,7 +29,7 @@ www
       -tab-dash.html
       -tab-friends.html
       -tabs.html
-{% endraw %}{% endhighlight %}
+{% endraw %} {% endhighlight %}
 
 The way we will be restructuring the files will be represented by each state declared inside the app. To learn more about states you can read about them in more detail in the ui-router's docs [here](http://angular-ui.github.io/ui-router/site/#/api/ui.router). In this structure our app has multiple states and some of those states have children states.
 
