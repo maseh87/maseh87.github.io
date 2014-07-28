@@ -22,7 +22,7 @@ owner:
   flickr:
   tumblr:
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:
+  google_plus: maseh87
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:
@@ -37,7 +37,7 @@ links:
     # url: /about/
   - title: Articles
     url: /articles/
-  # - title: Theme Setup
+  # - title: About Me
     # url: /theme-setup/
   # - title: Made Mistakes
     # url: http://mademistakes.com
@@ -48,7 +48,7 @@ timezone:    America/New_York
 future:      true
 highlighter: pygments
 markdown:    kramdown
-
+search: true
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
 
