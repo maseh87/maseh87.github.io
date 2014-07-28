@@ -31,7 +31,7 @@
 
 <link rel="canonical" href="http://maseh87.github.io/file-structure/">
 <link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Mason's Blog About Javascript Feed">
-
+<link rel="author" href="maseh87?rel=author">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -115,8 +115,8 @@
       <footer class="entry-meta">
         <img src="http://maseh87.github.io/images/me.jpg" alt="Mason Hargrove photo" class="author-photo">
         <span class="author vcard">By <span class="fn"><a href="http://maseh87.github.io/about/" title="About Mason Hargrove">Mason Hargrove</a></span></span>
-        <span class="entry-date date published"><time datetime="2014-06-28T00:00:00-04:00"><i class="icon-calendar-empty"></i> June 28, 2014</time></span>
-        <span class="entry-date date modified"><time datetime="2014-03-26"><i class="icon-pencil"></i> March 26, 2014</time></span>
+        <span class="entry-date date published"><time datetime="2014-07-21T00:00:00-04:00"><i class="icon-calendar-empty"></i> July 21, 2014</time></span>
+        <span class="entry-date date modified"><time datetime="2014-07-21"><i class="icon-pencil"></i> July 21, 2014</time></span>
         <span class="entry-comments"><i class="icon-comment-alt"></i> <a href="#disqus_thread">Comment</a></span>
         <span><a href="http://maseh87.github.io/file-structure/" rel="bookmark" title="Modular file structure for your Angular project"><i class="icon-link"></i> Permalink</a></span>
         
@@ -129,40 +129,76 @@
             <!-- /.social-share -->
       </footer>
       <div class="entry-content">
-        <p>Alright boys and girls, I am going to give you an example on how I structure my Angular projects. I will be using the starter tabs app given to you by Ionic for this tutorial. If you don’t know what Ionic is click this link and check it out, it is the new hotness to say the least.</p>
+        <p>Alright boys and girls, I am going to give you an example on how I structure my <a href="https://angularjs.org/">Angular</a> projects. I will be using the starter tabs app given to you by Ionic for this tutorial. If you don’t know what Ionic is click this <a href="http://ionicframework.com/getting-started/">link</a> and follow the instructions on starting the myApp tabs application, it is the new hotness to say the least.</p>
 
-<p>After you have you have scaffolded out your new Ionic tabs app, inside of your www folder is where we will doing all of the work. Ionic provides you with a good base structure to get started but it can get very cluttered quickly as your app grows. The current folder layout is structured like this.</p>
+<p>After you have you have scaffolded out your new Ionic tabs app, inside of your www folder is where we will doing all of the work. Ionic provides you with a good base structure to get started but it can get cluttered very quickly as your app grows. The current folder layout is structured like this.</p>
 
-<p>// The client side folder which hold all client side code
-www
-  -css
-  -img
-  -js
-    -app.js
-    -controllers.js
-    -services.js
-  -templates
-    -friend-detail.html
-    -tab-account.html
-    -tab-dash.html
-    -tab-friends.html
-    -tabs.html</p>
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span>  <span class="c1">// The client side folder which hold all client side code</span>
+<span class="lineno"> 2</span> <span class="nx">www</span>
+<span class="lineno"> 3</span>   <span class="o">-&gt;</span> <span class="nx">css</span>
+<span class="lineno"> 4</span>   <span class="o">-&gt;</span> <span class="nx">img</span>
+<span class="lineno"> 5</span>   <span class="o">-&gt;</span> <span class="nx">js</span>
+<span class="lineno"> 6</span>       <span class="o">-</span><span class="nx">app</span><span class="p">.</span><span class="nx">js</span>
+<span class="lineno"> 7</span>       <span class="o">-</span><span class="nx">controllers</span><span class="p">.</span><span class="nx">js</span>
+<span class="lineno"> 8</span>       <span class="o">-</span><span class="nx">services</span><span class="p">.</span><span class="nx">js</span>
+<span class="lineno"> 9</span>   <span class="o">-&gt;</span> <span class="nx">templates</span>
+<span class="lineno">10</span>       <span class="o">-</span><span class="nx">friend</span><span class="o">-</span><span class="nx">detail</span><span class="p">.</span><span class="nx">html</span>
+<span class="lineno">11</span>       <span class="o">-</span><span class="nx">tab</span><span class="o">-</span><span class="nx">account</span><span class="p">.</span><span class="nx">html</span>
+<span class="lineno">12</span>       <span class="o">-</span><span class="nx">tab</span><span class="o">-</span><span class="nx">dash</span><span class="p">.</span><span class="nx">html</span>
+<span class="lineno">13</span>       <span class="o">-</span><span class="nx">tab</span><span class="o">-</span><span class="nx">friends</span><span class="p">.</span><span class="nx">html</span>
+<span class="lineno">14</span>       <span class="o">-</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">html</span>
+<span class="lineno">15</span>  
+</code></pre></div>
 
-<p>The way we will be restructuring the files will be represented by each state declared inside the app. To learn more about states you can read about them in more detail in the ui-router’s docs here. In this structure our app has multiple states and some of those states have children states.</p>
+<p>The way we will be restructuring the files will be represented by each state declared inside the app. To learn more about states you can read about them in more detail in the ui-router’s docs <a href="http://angular-ui.github.io/ui-router/site/#/api/ui.router">here</a>. In this structure our app has multiple states and some of those states have children states.</p>
 
 <p>The tabs.html file holds the tabs for the footer of our application. Each tab has its own view and a state associated with it. Don’t worry if you dont understand exactly what the states are just yet, I will dive deeper into ui-router in the following blog post.</p>
 
-<p>To give you a better understanding this is a visual example of how our Ionic app is laid out. Inside of your app.js file you will see all of the currents states and how they are structured.</p>
+<p>To give you a better understanding here is a visual example of how our Ionic app is laid out. Inside of your app.js file you will see all of the currents states and how they are structured.</p>
+
+<figure>
+  <img src="/images/filestructure.jpg" />
+</figure>
+
+<p>So lets set up our files to better respresent how our app is already structured.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span>   <span class="nx">www</span>
+<span class="lineno"> 2</span>     <span class="o">-&gt;</span> <span class="nx">css</span>
+<span class="lineno"> 3</span>     <span class="o">-&gt;</span> <span class="nx">img</span>
+<span class="lineno"> 4</span>     <span class="o">-&gt;</span> <span class="nx">starter</span> <span class="p">(</span><span class="nx">Parent</span> <span class="nx">Module</span><span class="p">)</span>
+<span class="lineno"> 5</span>           <span class="nx">starter</span><span class="p">.</span><span class="nx">js</span>
+<span class="lineno"> 6</span>           <span class="nx">starter</span><span class="p">.</span><span class="nx">html</span>
+<span class="lineno"> 7</span>       <span class="o">-&gt;</span><span class="nx">services</span> <span class="c1">// On the root of the starter folder to be injected to any controller within the app</span>
+<span class="lineno"> 8</span>           <span class="nx">services</span><span class="p">.</span><span class="nx">js</span>
+<span class="lineno"> 9</span>       <span class="o">-&gt;</span> <span class="nx">tabs</span> <span class="p">(</span><span class="nx">tabs</span> <span class="nx">state</span><span class="p">)</span> <span class="c1">// has 3 child states account, dash, and friends</span>
+<span class="lineno">10</span>           <span class="nx">tabs</span><span class="p">.</span><span class="nx">html</span>
+<span class="lineno">11</span>           <span class="nx">tabs</span><span class="p">.</span><span class="nx">js</span>
+<span class="lineno">12</span>         <span class="o">-&gt;</span> <span class="nx">account</span> <span class="p">(</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">account</span> <span class="nx">state</span><span class="p">)</span>
+<span class="lineno">13</span>               <span class="nx">account</span><span class="p">.</span><span class="nx">js</span>
+<span class="lineno">14</span>               <span class="nx">account</span><span class="p">.</span><span class="nx">html</span>
+<span class="lineno">15</span>         <span class="o">-&gt;</span> <span class="nx">dash</span> <span class="p">(</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">dash</span> <span class="nx">state</span><span class="p">)</span>
+<span class="lineno">16</span>               <span class="nx">dash</span><span class="p">.</span><span class="nx">js</span>
+<span class="lineno">17</span>               <span class="nx">dash</span><span class="p">.</span><span class="nx">html</span>
+<span class="lineno">18</span>         <span class="o">-&gt;</span> <span class="nx">friends</span> <span class="p">(</span><span class="nx">tash</span><span class="p">.</span><span class="nx">friends</span> <span class="nx">state</span><span class="p">)</span>
+<span class="lineno">19</span>               <span class="nx">friends</span><span class="p">.</span><span class="nx">html</span>
+<span class="lineno">20</span>               <span class="nx">friends</span><span class="p">.</span><span class="nx">js</span>
+<span class="lineno">21</span>  
+</code></pre></div>
+
+<p>Now each state has it’s own folder. Inside each folder contains the states template and controller located in it’s respective .js file. The tabs state is located inside of the tabs folder. Each of it’s children have their own folders inside the tabs folder. Now if you want to add a new view or had to debug for example you can navigate through your files with ease. This way of structure allows your application to grow as you add more features. This convention will also help you reduce merge conflicts while working in teams on a project. Each team member can work in their own folders without changing the same files. (If you haven’t experienced this problem, you will!)</p>
+
+<p>Now that you have a better understanding of structuring your new application please feel free comment with any questions or an insight to how you normally structure applications of your own.</p>
+
 
         <div id="disqus_thread"></div><!-- /#disqus_thread -->
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://maseh87.github.io/angular-tips/" class="btn" title="Getting Started with Angular">Previous article</a>
+        <a href="http://maseh87.github.io/node-server/" class="btn" title="Create a node server using Express">Previous article</a>
       
       
-        <a href="http://maseh87.github.io/node-server/" class="btn" title="Create a node server using Express">Next article</a>
+        <a href="http://maseh87.github.io/ionic-cards-ui/" class="btn" title="Issue Using Ionic's Swipeable Cards?">Next article</a>
       
     </nav><!-- /.pagination -->
   </article>
@@ -174,7 +210,7 @@ www
 <div class="social-icons">
 	<a href="http://twitter.com/maseh87" title="Mason Hargrove on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
 	
-	
+	<a href="maseh87" title="Mason Hargrove on Google+" target="_blank"><i class="icon-google-plus icon-2x"></i></a>
 	<a href="http://linkedin.com/in/maseh87" title="Mason Hargrove on LinkedIn" target="_blank"><i class="icon-linkedin icon-2x"></i></a>
 	
 	<a href="http://instagram.com/maseh87" title="Mason Hargrove on Instagram" target="_blank"><i class="icon-instagram icon-2x"></i></a>
@@ -201,21 +237,21 @@ www
   });
 
   (function( $, window, undefined ) {
-    
+
      var bs = {
           close: $(".icon-remove-sign"),
           searchform: $(".search-form"),
           canvas: $("body"),
           dothis: $('.dosearch')
       };
-    
+
     bs.dothis.on('click', function() {
       $('.search-wrapper').css({ display: "block" });
       bs.searchform.toggleClass('active');
       bs.searchform.find('input').focus();
       bs.canvas.toggleClass('search-overlay');
     });
-    
+
       bs.close.on('click', function() {
         $('.search-wrapper').removeAttr( 'style' );
         bs.searchform.toggleClass('active');

@@ -9,13 +9,125 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://maseh87.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://maseh87.github.io/" />
-<updated>2014-07-22T02:09:43-04:00</updated>
+<updated>2014-07-28T19:09:36-04:00</updated>
 <id>http://maseh87.github.io/</id>
 <author>
   <name>Mason Hargrove</name>
   <uri>http://maseh87.github.io/</uri>
   <email>maseh87@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Issue Using Ionic's Swipeable Cards?]]></title>
+  <link rel="alternate" type="text/html" href="http://maseh87.github.io/ionic-cards-ui/"/>
+  <id>http://maseh87.github.io/ionic-cards-ui</id>
+  <updated>2014-07-28T00:00:00-00:00</updated>
+  <published>2014-07-28T00:00:00-04:00</published>
+  
+  <author>
+    <name>Mason Hargrove</name>
+    <uri>http://maseh87.github.io</uri>
+    <email>maseh87@gmail.com</email>
+  </author>
+  <category scheme="http://maseh87.github.io/tags/#ionic" term="ionic" /><category scheme="http://maseh87.github.io/tags/#javascript" term="javascript" /><category scheme="http://maseh87.github.io/tags/#errors" term="errors" /><category scheme="http://maseh87.github.io/tags/#cards" term="cards" />
+  <content type="html">
+  
+    &lt;p&gt;When I tried using the swipeable cards service inside my application recently I ran into a problem that had my pulling my hair out for a few hours. After you add the file to your app and the card is loaded correctly when you swipe the card this error will pop up and blow your mind.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Uncaught TypeError: undefined is not a function    ionic.cards.js:210&lt;/li&gt;
+  &lt;li&gt;Uncaught TypeError: undefined is not a function    ionic.cards.js:214&lt;/li&gt;
+  &lt;li&gt;Uncaught TypeError: undefined is not a function    ionic.cards.js:218&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After I did some digging I found that inside the ionic.cards.js file you will have to change &lt;em&gt;window.rAF&lt;/em&gt; to &lt;em&gt;ionic.requestAnimationFrame&lt;/em&gt; and it will cure your headache! Give that a shot and tell me if you ran into the same issue and if this post was helpful.&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/ionic-cards-ui/&quot;&gt;Issue Using Ionic's Swipeable Cards?&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on July 28, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Modular file structure for your Angular project]]></title>
+  <link rel="alternate" type="text/html" href="http://maseh87.github.io/file-structure/"/>
+  <id>http://maseh87.github.io/file-structure</id>
+  <updated>2014-07-21T00:00:00-00:00</updated>
+  <published>2014-07-21T00:00:00-04:00</published>
+  
+  <author>
+    <name>Mason Hargrove</name>
+    <uri>http://maseh87.github.io</uri>
+    <email>maseh87@gmail.com</email>
+  </author>
+  <category scheme="http://maseh87.github.io/tags/#ionic" term="ionic" /><category scheme="http://maseh87.github.io/tags/#angular" term="angular" /><category scheme="http://maseh87.github.io/tags/#scaffold" term="scaffold" />
+  <content type="html">
+  
+    &lt;p&gt;Alright boys and girls, I am going to give you an example on how I structure my &lt;a href=&quot;https://angularjs.org/&quot;&gt;Angular&lt;/a&gt; projects. I will be using the starter tabs app given to you by Ionic for this tutorial. If you don’t know what Ionic is click this &lt;a href=&quot;http://ionicframework.com/getting-started/&quot;&gt;link&lt;/a&gt; and follow the instructions on starting the myApp tabs application, it is the new hotness to say the least.&lt;/p&gt;
+
+&lt;p&gt;After you have you have scaffolded out your new Ionic tabs app, inside of your www folder is where we will doing all of the work. Ionic provides you with a good base structure to get started but it can get cluttered very quickly as your app grows. The current folder layout is structured like this.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// The client side folder which hold all client side code&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;www&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;controllers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;templates&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;friend&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;detail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;friends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tabs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The way we will be restructuring the files will be represented by each state declared inside the app. To learn more about states you can read about them in more detail in the ui-router’s docs &lt;a href=&quot;http://angular-ui.github.io/ui-router/site/#/api/ui.router&quot;&gt;here&lt;/a&gt;. In this structure our app has multiple states and some of those states have children states.&lt;/p&gt;
+
+&lt;p&gt;The tabs.html file holds the tabs for the footer of our application. Each tab has its own view and a state associated with it. Don’t worry if you dont understand exactly what the states are just yet, I will dive deeper into ui-router in the following blog post.&lt;/p&gt;
+
+&lt;p&gt;To give you a better understanding here is a visual example of how our Ionic app is laid out. Inside of your app.js file you will see all of the currents states and how they are structured.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/images/filestructure.jpg&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So lets set up our files to better respresent how our app is already structured.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;   &lt;span class=&quot;nx&quot;&gt;www&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;starter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Parent&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;           &lt;span class=&quot;nx&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;           &lt;span class=&quot;nx&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;services&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// On the root of the starter folder to be injected to any controller within the app&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;           &lt;span class=&quot;nx&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tabs&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tabs&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// has 3 child states account, dash, and friends&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;           &lt;span class=&quot;nx&quot;&gt;tabs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;           &lt;span class=&quot;nx&quot;&gt;tabs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tabs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;               &lt;span class=&quot;nx&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;               &lt;span class=&quot;nx&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dash&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tabs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dash&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;               &lt;span class=&quot;nx&quot;&gt;dash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt;               &lt;span class=&quot;nx&quot;&gt;dash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;friends&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;friends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt;               &lt;span class=&quot;nx&quot;&gt;friends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt;               &lt;span class=&quot;nx&quot;&gt;friends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;21&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now each state has it’s own folder. Inside each folder contains the states template and controller located in it’s respective .js file. The tabs state is located inside of the tabs folder. Each of it’s children have their own folders inside the tabs folder. Now if you want to add a new view or had to debug for example you can navigate through your files with ease. This way of structure allows your application to grow as you add more features. This convention will also help you reduce merge conflicts while working in teams on a project. Each team member can work in their own folders without changing the same files. (If you haven’t experienced this problem, you will!)&lt;/p&gt;
+
+&lt;p&gt;Now that you have a better understanding of structuring your new application please feel free comment with any questions or an insight to how you normally structure applications of your own.&lt;/p&gt;
+
+
+  
+  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/file-structure/&quot;&gt;Modular file structure for your Angular project&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on July 21, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -77,51 +189,6 @@
 
   
   &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/node-server/&quot;&gt;Create a node server using Express&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on June 28, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Modular file structure for your Angular project]]></title>
-  <link rel="alternate" type="text/html" href="http://maseh87.github.io/file-structure/"/>
-  <id>http://maseh87.github.io/file-structure</id>
-  <updated>2014-03-26T00:00:00-00:00</updated>
-  <published>2014-06-28T00:00:00-04:00</published>
-  
-  <author>
-    <name>Mason Hargrove</name>
-    <uri>http://maseh87.github.io</uri>
-    <email>maseh87@gmail.com</email>
-  </author>
-  <category scheme="http://maseh87.github.io/tags/#ionic" term="ionic" /><category scheme="http://maseh87.github.io/tags/#angular" term="angular" /><category scheme="http://maseh87.github.io/tags/#scaffold" term="scaffold" />
-  <content type="html">
-  
-    &lt;p&gt;Alright boys and girls, I am going to give you an example on how I structure my Angular projects. I will be using the starter tabs app given to you by Ionic for this tutorial. If you don’t know what Ionic is click this link and check it out, it is the new hotness to say the least.&lt;/p&gt;
-
-&lt;p&gt;After you have you have scaffolded out your new Ionic tabs app, inside of your www folder is where we will doing all of the work. Ionic provides you with a good base structure to get started but it can get very cluttered quickly as your app grows. The current folder layout is structured like this.&lt;/p&gt;
-
-&lt;p&gt;// The client side folder which hold all client side code
-www
-  -css
-  -img
-  -js
-    -app.js
-    -controllers.js
-    -services.js
-  -templates
-    -friend-detail.html
-    -tab-account.html
-    -tab-dash.html
-    -tab-friends.html
-    -tabs.html&lt;/p&gt;
-
-&lt;p&gt;The way we will be restructuring the files will be represented by each state declared inside the app. To learn more about states you can read about them in more detail in the ui-router’s docs here. In this structure our app has multiple states and some of those states have children states.&lt;/p&gt;
-
-&lt;p&gt;The tabs.html file holds the tabs for the footer of our application. Each tab has its own view and a state associated with it. Don’t worry if you dont understand exactly what the states are just yet, I will dive deeper into ui-router in the following blog post.&lt;/p&gt;
-
-&lt;p&gt;To give you a better understanding this is a visual example of how our Ionic app is laid out. Inside of your app.js file you will see all of the currents states and how they are structured.&lt;/p&gt;
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/file-structure/&quot;&gt;Modular file structure for your Angular project&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on June 28, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -238,31 +305,6 @@ www
 
   
   &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/angular-tips/&quot;&gt;Getting Started with Angular&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on June 19, 2014.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Authentication With Expressjs]]></title>
-  <link rel="alternate" type="text/html" href="http://maseh87.github.io/auth-with-express/"/>
-  <id>http://maseh87.github.io/auth-with-express</id>
-  <updated>2014-03-26T00:00:00-00:00</updated>
-  <published>2014-06-15T00:00:00-04:00</published>
-  
-  <author>
-    <name>Mason Hargrove</name>
-    <uri>http://maseh87.github.io</uri>
-    <email>maseh87@gmail.com</email>
-  </author>
-  <category scheme="http://maseh87.github.io/tags/#auth" term="auth" /><category scheme="http://maseh87.github.io/tags/#javascript" term="javascript" /><category scheme="http://maseh87.github.io/tags/#express" term="express" />
-  <content type="html">
-  
-    &lt;p&gt;How do you do simple authentication using an Express server?&lt;/p&gt;
-
-&lt;p&gt;First let’s set up a basic express server… if you have never used express read [this] to get started.&lt;/p&gt;
-
-
-  
-  &lt;p&gt;&lt;a href=&quot;http://maseh87.github.io/auth-with-express/&quot;&gt;Authentication With Expressjs&lt;/a&gt; was originally published by Mason Hargrove at &lt;a href=&quot;http://maseh87.github.io&quot;&gt;Mason's Blog About Javascript&lt;/a&gt; on June 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 

@@ -30,7 +30,7 @@
 
 <link rel="canonical" href="http://maseh87.github.io/articles/">
 <link href="http://maseh87.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Mason's Blog About Javascript Feed">
-
+<link rel="author" href="maseh87?rel=author">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -112,13 +112,13 @@
       <div class="entry-content">
         <ul class="post-list">
  
+  <li><article><a href="http://maseh87.github.io/ionic-cards-ui/">Issue Using Ionic's Swipeable Cards? <span class="entry-date"><time datetime="2014-07-28T00:00:00-04:00">July 28, 2014</time></span></a></article></li>
+ 
+  <li><article><a href="http://maseh87.github.io/file-structure/">Modular file structure for your Angular project <span class="entry-date"><time datetime="2014-07-21T00:00:00-04:00">July 21, 2014</time></span></a></article></li>
+ 
   <li><article><a href="http://maseh87.github.io/node-server/">Create a node server using Express <span class="entry-date"><time datetime="2014-06-28T00:00:00-04:00">June 28, 2014</time></span></a></article></li>
  
-  <li><article><a href="http://maseh87.github.io/file-structure/">Modular file structure for your Angular project <span class="entry-date"><time datetime="2014-06-28T00:00:00-04:00">June 28, 2014</time></span></a></article></li>
- 
   <li><article><a href="http://maseh87.github.io/angular-tips/">Getting Started with Angular <span class="entry-date"><time datetime="2014-06-19T00:00:00-04:00">June 19, 2014</time></span></a></article></li>
- 
-  <li><article><a href="http://maseh87.github.io/auth-with-express/">Authentication With Expressjs <span class="entry-date"><time datetime="2014-06-15T00:00:00-04:00">June 15, 2014</time></span></a></article></li>
  
   <li><article><a href="http://maseh87.github.io/nQueens/">nQueens Problem <span class="entry-date"><time datetime="2014-06-13T00:00:00-04:00">June 13, 2014</time></span></a></article></li>
  
@@ -141,7 +141,7 @@
 <div class="social-icons">
 	<a href="http://twitter.com/maseh87" title="Mason Hargrove on Twitter" target="_blank"><i class="icon-twitter icon-2x"></i></a>
 	
-	
+	<a href="maseh87" title="Mason Hargrove on Google+" target="_blank"><i class="icon-google-plus icon-2x"></i></a>
 	<a href="http://linkedin.com/in/maseh87" title="Mason Hargrove on LinkedIn" target="_blank"><i class="icon-linkedin icon-2x"></i></a>
 	
 	<a href="http://instagram.com/maseh87" title="Mason Hargrove on Instagram" target="_blank"><i class="icon-instagram icon-2x"></i></a>
@@ -168,21 +168,21 @@
   });
 
   (function( $, window, undefined ) {
-    
+
      var bs = {
           close: $(".icon-remove-sign"),
           searchform: $(".search-form"),
           canvas: $("body"),
           dothis: $('.dosearch')
       };
-    
+
     bs.dothis.on('click', function() {
       $('.search-wrapper').css({ display: "block" });
       bs.searchform.toggleClass('active');
       bs.searchform.find('input').focus();
       bs.canvas.toggleClass('search-overlay');
     });
-    
+
       bs.close.on('click', function() {
         $('.search-wrapper').removeAttr( 'style' );
         bs.searchform.toggleClass('active');

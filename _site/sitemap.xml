@@ -30,6 +30,10 @@
     </url>
     
     <url>
+        <loc>http://maseh87.github.io/search.json</loc>
+    </url>
+    
+    <url>
         <loc>http://maseh87.github.io/sitemap.xml</loc>
     </url>
     
@@ -40,7 +44,7 @@
 
     
     <url>
-        <loc>http://maseh87.github.io/node-server/</loc>
+        <loc>http://maseh87.github.io/ionic-cards-ui/</loc>
     </url>
     
     <url>
@@ -48,11 +52,11 @@
     </url>
     
     <url>
-        <loc>http://maseh87.github.io/angular-tips/</loc>
+        <loc>http://maseh87.github.io/node-server/</loc>
     </url>
     
     <url>
-        <loc>http://maseh87.github.io/auth-with-express/</loc>
+        <loc>http://maseh87.github.io/angular-tips/</loc>
     </url>
     
     <url>
