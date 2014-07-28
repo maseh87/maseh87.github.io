@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Ionic's Swipeable Cards
+title: Issue Using Ionic's Swipeable Cards?
 description: "A common error when using the swipeable cards service"
 modified: 2014-07-28
 tags: [ionic, javascript, errors, cards]
