@@ -5,7 +5,7 @@ description: "A common error when using the swipeable cards service"
 modified: 2014-07-28
 tags: [ionic, javascript, errors, cards]
 image:
-  feature: so-simple-sample-image-2.jpg
+  feature: sanfran-bridge.jpg
 comments: true
 share: true
 ---
