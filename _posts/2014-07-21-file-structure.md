@@ -5,7 +5,7 @@ description: "An indepth look on an efficient way to scaffold an Angular App"
 modified: 2014-07-21
 tags: [ionic, angular, scaffold]
 image:
-  feature: so-simple-sample-image-2.jpg
+  feature: San-Francisco-Wallpaper-1080.jpg
 comments: true
 share: true
 ---
