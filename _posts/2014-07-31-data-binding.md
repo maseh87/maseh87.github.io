@@ -46,6 +46,6 @@ The $scope object is the object that can be used to bind values to the template.
 </html>
 {% endraw %}{% endhighlight %}
 
-The example that is in the double curly brackets represents the example property that is attached to the $scope object. Now when we view the template on the browser you will see HEY! on your page. There are a ton of things that you can do with the $scope object and what can be bound to your template. Angular makes binding extremely easy and it is very efficient when creating your Angular applications.
+The keyword example that is in the double curly brackets represents the example property that is attached to the $scope object. Now when we view the template on the browser you will see HEY! on your page. There are a ton of things that you can do with the $scope object and what can be bound to your template. Angular makes binding extremely easy and it is very efficient when creating your Angular applications.
 
 
