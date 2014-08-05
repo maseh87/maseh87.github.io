@@ -5,7 +5,7 @@ description: "How to select 2 separate sheets in Google Sheets"
 modified: 2014-08-05
 tags: [javascript, google, sheets]
 image:
-  feature: so-simple-sample-image-1.jpg
+  feature: graffiti-wallpaper.jpg
 comments: true
 share: true
 ---
