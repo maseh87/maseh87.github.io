@@ -18,13 +18,13 @@ First you need to name each sheet so right click on the tab and rename each shee
 
 You can either reference the sheets by their names or you can reference the active sheet. The active sheet is the sheet that is currently open and is being viewed.
  This is how to select the active spreadsheet
-
+{% highlight javascript linenos %}{% raw %}
  //sheet is an object that has access to many methods
  var sheet = SpreadsheetApp.getActiveSpreadsheet();
 
  //to select each sheet individually you do this...
  var firstSheet = sheet.getSheetByName('nameOfSheet');
  var secondSheet = sheet.getSheetByName('nameOfSheet');
-
+{% endraw %}{% endhighlight %}
  After you have references to each sheet you can compare between the two or change each one individually.
 
