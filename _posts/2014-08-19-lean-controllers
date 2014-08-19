@@ -10,3 +10,19 @@ comments: true
 share: true
 ---
 
+When creating your Angular application it is really easy to get lost and start coding all of your client side logic in the controller which can lead to very slow performance and a number of other issues. To get around this issue all of your logic can be taken care of inside of a service. Also, to keep your application as fast as possible you should only attach properties on the $scope object if it is going to be rendered on your view.
+
+
+{% highlight javascript linenos %}{% raw %}angular.controller('MyController', function($scope, $http) {
+  //a simple $http request to a server that gets invoked on every click in the view
+  $scope.click = function() {
+    $http({
+      url: '/test/url',
+      method: "GET"
+  //$http returns a promise
+    }).then(function(result) {
+  //log the results back from the server
+      console.log(result.data);
+    });
+  };
+});{% endraw %}{% endhighlight %}
