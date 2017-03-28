@@ -6,7 +6,10 @@ description: "An archive of posts sorted by date."
 ---
 
 <ul class="post-list">
-{% for post in site.posts %} 
+{% for post in site.posts %}
   <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a></article></li>
 {% endfor %}
 </ul>
+
+<!-- COLLECTIVE WIDGET CODE START -->
+<div class="sc-look-widget" data-options="%7B%22frameUrl%22%3A%22%2F%2Fshopsensewidget.shopstyle.com%2Flook-widget%2Findex.html%3Fwidgetid%3D58da7ddfe7055aaa2d75787a%22%7D"> <script> !function(doc,s,id){ var e, p, cb; if(!doc.getElementById(id)) { e = doc.createElement(s); e.id = id; cb = new Date().getTime().toString(); p = '//shopsensewidget.shopstyle.com/look-widget-script/assets/build/look-widget-script.js?cb=' + cb; e.src = p; doc.body.appendChild(e); } if(typeof window.scLookWidget === 'object'){ if(doc.readyState === 'complete'){ window.scLookWidget.init(); } } }(document, 'script', 'sc-look-widget-script'); </script> </div> <!-- COLLECTIVE WIDGET CODE END -->
